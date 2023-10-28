@@ -9,7 +9,7 @@ const Event = () => {
                 heading={"Upcoming Events"}
             ></SectionTitle>
             <p
-                className='text-base mt-5 text-yellow-400 font-black text-center'>
+                className='text-lg mt-5 text-yellow-400 font-black text-center'>
                 {
                     moment().format("dddd, MMMM D, YYYY")
                 }
@@ -18,7 +18,7 @@ const Event = () => {
             {/* live date */}
             {/* Marquee start */}
             <Marquee
-                className='font-semibold text-base mt-6 mb-5'>
+                className='font-semibold text-base mt-4 mb-5 text-gray-600'>
                 Taste the Old and New Napa Valley and
                 Weekend with Healthy & Excellent Breakfasts and
                 Taste the Linguini Vineyards Cabernet Avignon
