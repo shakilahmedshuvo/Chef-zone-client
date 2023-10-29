@@ -1,12 +1,14 @@
+import Chef from "../Chef/Chef";
 import Event from "../Event/Event";
 import Facilities from "../Facilities/Facilities";
 
 const Home = () => {
     return (
-        <div>
+        <>
             <Event />
             <Facilities />
-        </div>
+            < Chef />
+        </>
     );
 };
 

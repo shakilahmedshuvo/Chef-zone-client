@@ -8,7 +8,7 @@ const SectionTitle = ({ heading, subHeading }) => {
                 {heading}
             </h2>
             <p
-                className='text-lg mt-5 text-yellow-400 font-black text-center'>
+                className='text-sm mt-5 text-yellow-400 font-black text-center'>
                 {subHeading}
             </p>
         </>
