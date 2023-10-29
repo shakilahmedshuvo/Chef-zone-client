@@ -43,7 +43,7 @@ const Event = () => {
                         add…
                     </p>
                     <button
-                        className="bg-gray-800 text-white font-black py-3 px-6 rounded-xl text-center mt-5">
+                        className="bg-gray-800 text-white font-black py-3 px-6 rounded-xl text-center mt-1 border-2 border-gray-600 hover:bg-white hover:text-black duration-300">
                         View More
                     </button>
                 </div>
@@ -67,7 +67,7 @@ const Event = () => {
                 </div>
 
 
-                <div className='col-span-8 mt-5 ms-5'>
+                <div className='col-span-8 mt-8 ms-10'>
                     <h3 className='text-yellow-400 font-black text-2xl'>
                         06/08/2024 — 12/08/2024
                     </h3>
@@ -82,7 +82,7 @@ const Event = () => {
                         add…
                     </p>
                     <button
-                        className="bg-gray-800 text-white font-black py-3 px-6 rounded-xl text-center mt-10">
+                        className="bg-gray-800 text-white font-black py-3 px-6 rounded-xl text-center mt-2 border-2 border-gray-600 hover:bg-white hover:text-black duration-300">
                         View More
                     </button>
                 </div>

@@ -29,11 +29,11 @@ const Facilities = () => {
 
 
                 {/* first card section start */}
-                <>
+                <div className="group group/item">
                     <div className='p-3 border-gray-200 border-2 rounded-lg mx-3 px-8 my-6'>
                         <div className="flex items-center mt-6">
                             <GiCookingPot
-                                className='text-5xl bg-yellow-400 text-white p-1' />
+                                className='text-5xl bg-yellow-400 text-white p-1 rounded-md' />
                             <h2
                                 className='text-3xl font-extrabold text-yellow-400 ms-5'>
                                 Facilities Provided
@@ -45,21 +45,21 @@ const Facilities = () => {
                         </p>
                         <div className="flex justify-end mb-2 mt-3">
                             <p
-                                className='border-2 border-gray-300 w-fit font-black px-4 py-2 rounded-lg'>
+                                className='border-2 border-gray-300 w-fit font-black px-4 py-2 rounded-lg group-hover:bg-black group-hover:text-white duration-500 cursor-pointer'>
                                 VIEW
                             </p>
                         </div>
                     </div>
-                </>
+                </div>
                 {/* first card section end */}
 
 
-                {/* scend card section start */}
-                <>
+                {/* second card section start */}
+                <div className="group group/item">
                     <div className='p-3 border-gray-200 border-2 rounded-lg mx-3 px-8 my-6'>
                         <div className="flex items-center mt-6">
                             <BiBuildingHouse
-                                className='text-5xl bg-yellow-400 text-white p-1' />
+                                className='text-5xl bg-yellow-400 text-white p-1 rounded-md' />
                             <h2
                                 className='text-3xl font-extrabold text-yellow-400 ms-5'>
                                 Facilities Provided
@@ -71,21 +71,21 @@ const Facilities = () => {
                         </p>
                         <div className="flex justify-end mb-2 mt-3">
                             <p
-                                className='border-2 border-gray-300 w-fit font-black px-4 py-2 rounded-lg'>
+                                className='border-2 border-gray-300 w-fit font-black px-4 py-2 rounded-lg group-hover:bg-black group-hover:text-white duration-500 cursor-pointer'>
                                 VIEW
                             </p>
                         </div>
                     </div>
-                </>
-                {/* first card section end */}
+                </div>
+                {/* second card section end */}
 
 
-                {/* first card section start */}
-                <>
+                {/* third card section start */}
+                <div className="group group/item">
                     <div className='p-3 border-gray-200 border-2 rounded-lg mx-3 px-8'>
                         <div className="flex items-center mt-6">
                             <BsPeople
-                                className='text-5xl bg-yellow-400 text-white p-1' />
+                                className='text-5xl bg-yellow-400 text-white p-1 rounded-md' />
                             <h2
                                 className='text-3xl font-extrabold text-yellow-400 ms-5'>
                                 Real Work Practice
@@ -97,21 +97,21 @@ const Facilities = () => {
                         </p>
                         <div className="flex justify-end mb-2 mt-3">
                             <p
-                                className='border-2 border-gray-300 w-fit font-black px-4 py-2 rounded-lg'>
+                                className='border-2 border-gray-300 w-fit font-black px-4 py-2 rounded-lg group-hover:bg-black group-hover:text-white duration-500 cursor-pointer'>
                                 VIEW
                             </p>
                         </div>
                     </div>
-                </>
-                {/* first card section end */}
+                </div>
+                {/* third card section end */}
 
 
-                {/* first card section start */}
-                <>
+                {/* fourth card section start */}
+                <div className="group group/item">
                     <div className='p-3 border-gray-200 border-2 rounded-lg mx-3 px-8'>
                         <div className="flex items-center mt-6">
                             <FaGraduationCap
-                                className='text-5xl bg-yellow-400 text-white p-1' />
+                                className='text-5xl bg-yellow-400 text-white p-1 rounded-md' />
                             <h2
                                 className='text-3xl font-extrabold text-yellow-400 ms-5'>
                                 Graduation Certificate
@@ -123,20 +123,20 @@ const Facilities = () => {
                         </p>
                         <div className="flex justify-end mb-2 mt-3">
                             <p
-                                className='border-2 border-gray-300 w-fit font-black px-4 py-2 rounded-lg'>
+                                className='border-2 border-gray-300 w-fit font-black px-4 py-2 rounded-lg group-hover:bg-black group-hover:text-white duration-500 cursor-pointer'>
                                 VIEW
                             </p>
                         </div>
                     </div>
-                </>
-                {/* first card section end */}
+                </div>
+                {/* fourth card section end */}
 
 
             </div>
             {/* card section end */}
             <div className='text-center my-10'>
                 <button
-                    className='bg-gray-900 font-black px-5 py-3 text-white rounded-lg hover:bg-white hover:text-black hover:border-2 hover:border-gray-300'>
+                    className='bg-gray-900 font-black px-5 py-3 text-white rounded-lg hover:bg-white hover:text-black border-2 hover:border-gray-300 duration-300'>
                     Learn More
                 </button>
             </div>
