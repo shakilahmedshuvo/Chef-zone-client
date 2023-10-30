@@ -42,7 +42,7 @@ const router = createBrowserRouter([
       {
         path: '/chefCollection/:id',
         element: <ChefDetailsPage />,
-        loader: ({ params }) => fetch(`https://chif-zone-server-shakilahmedshuvo.vercel.app/allData/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/chefCollection/${params.id}`)
       }
     ]
   },

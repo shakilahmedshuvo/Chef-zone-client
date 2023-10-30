@@ -15,7 +15,7 @@ const Chef = () => {
     // }, []);
 
 
-    // tan stack
+    // tan stack for data fetch
     const { data, isLoading } = useQuery({
         queryKey: ["chefCollection"],
         queryFn: async () => {
@@ -38,7 +38,7 @@ const Chef = () => {
             ></SectionTitle>
 
             {/* card map section start */}
-            <div className="grid lg:grid-cols-3">
+            <div className="grid lg:grid-cols-3 mt-8">
                 {
                     data?.map((data) => (
                         <ChefSingleCard

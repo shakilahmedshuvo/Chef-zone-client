@@ -3,16 +3,16 @@ import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 
 const ChefSingleCard = ({ data }) => {
-    const { chefImg, name, experience, likes, id } = data;
+    const { chefImg, name, experience, likes, _id } = data;
     // console.log(data);
 
     return (
-        <div className="mx-3 my-5">
+        <div className="mx-4 my-6 group group/item">
 
             {/* img start */}
-            <div>
+            <div className="overflow-hidden rounded-lg">
                 <img
-                    className="w-full rounded-lg"
+                    className="w-full duration-500 cursor-pointer group-hover:scale-105 transition"
                     src={chefImg}
                     alt="" />
             </div>
@@ -65,9 +65,9 @@ const ChefSingleCard = ({ data }) => {
                     {/* recommended section end */}
 
                     <Link
-                        to={`/chefCollection/${id}`}>
+                        to={`/chefCollection/${_id}`}>
                         <p
-                            className='bg-gray-900 text-white font-black w-full text-center py-4 rounded-lg mt-7'>
+                            className='bg-gray-900 hover:bg-gray-800 text-white font-black w-full text-center py-4 rounded-lg mt-7'>
                             View Recipes
                         </p>
                     </Link>
