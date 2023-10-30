@@ -13,7 +13,7 @@ const ChefDetailsPage = () => {
             {/* page header section start */}
             <>
                 <div className="flex justify-end items-center mt-10">
-                    <p className='text-white bg-yellow-400 w-fit font-black rounded-full px-7 py-1 text-sm'>
+                    <p className='text-white bg-yellow-400 w-fit font-black rounded-full px-6 py-2 text-xs'>
                         Recommended
                     </p>
                 </div>
@@ -32,7 +32,7 @@ const ChefDetailsPage = () => {
                 </div>
 
                 <div className="col-span-4 flex items-center justify-center">
-                    <p className="bg-gray-300 text-gray-600 font-bold w-fit rounded-full px-10 py-2 text-sm">
+                    <p className="bg-gray-300 text-gray-600 font-bold w-fit rounded-full px-16 py-3 text-sm">
                         Chef Recipe Details
                     </p>
                 </div>
@@ -47,9 +47,9 @@ const ChefDetailsPage = () => {
             {/* page header section end */}
 
             {/* main details section start */}
-            <div className="grid grid-cols-12 mt-10">
+            <div className="grid grid-cols-12 mt-16">
 
-           
+
                 {/* right side div start */}
                 <div className="col-span-4">
                     <ChefRightSection
@@ -69,7 +69,7 @@ const ChefDetailsPage = () => {
 
             </div>
             {/* main details section end */}
-            
+
 
         </div>
     );

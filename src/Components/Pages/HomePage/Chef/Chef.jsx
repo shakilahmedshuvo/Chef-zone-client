@@ -40,7 +40,7 @@ const Chef = () => {
             {/* card map section start */}
             <div className="grid lg:grid-cols-3 mt-8">
                 {
-                    data?.map((data) => (
+                    data.map((data) => (
                         <ChefSingleCard
                             key={data._id}
                             data={data}
