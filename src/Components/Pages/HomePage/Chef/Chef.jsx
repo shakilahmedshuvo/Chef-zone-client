@@ -1,29 +1,33 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import SectionTitle from "../../Shared/SectionTitle";
 import ChefSingleCard from "./ChefSingleCard";
 // import ChefSingleCard from "./ChefSingleCard";
-// import { useQuery } from "@tanstack/react-query";
+// import { useEffect, useState } from "react";
 
 const Chef = () => {
-    const [data, setData] = useState([]);
+    // const [data, setData] = useState([]);
 
-    useEffect(() => {
-        fetch("http://localhost:5000/chefCollection")
-            .then(res => res.json())
-            .then(data => setData(data))
-        // .then(data => console.log(data))
-    }, []);
+    // useEffect(() => {
+    //     fetch("http://localhost:5000/chefCollection")
+    //         .then(res => res.json())
+    //         .then(data => setData(data))
+    //     // .then(data => console.log(data))
+    // }, []);
 
 
     // tan stack
-    // const { data } = useQuery({
-    //     queryKey: ['chefCollection'],
-    //     queryFn: async () => {
-    //         const res = await fetch('http://localhost:5000/chefCollection');
-    //         console.log(data);
-    //         return res.json();
-    //     }
-    // })
+    const { data, isLoading } = useQuery({
+        queryKey: ["chefCollection"],
+        queryFn: async () => {
+            const res = await fetch('http://localhost:5000/chefCollection');
+            return res.json();
+        }
+    })
+    if (isLoading) {
+        return <p className="text-center text-yellow-400 text-4xl my-10">
+            Loading . . .
+        </p>
+    }
 
 
     return (
@@ -36,9 +40,9 @@ const Chef = () => {
             {/* card map section start */}
             <div className="grid lg:grid-cols-3">
                 {
-                    data.map((data) => (
+                    data?.map((data) => (
                         <ChefSingleCard
-                            key={data.id}
+                            key={data._id}
                             data={data}
                         ></ChefSingleCard>
                     ))

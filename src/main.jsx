@@ -18,6 +18,7 @@ import Home from './Components/Pages/HomePage/Home/Home';
 import Login from './Components/Pages/LoginPage/Login';
 import Register from './Components/Pages/Register/Register';
 import AuthProvider from './Components/Utilites/AuthProvider/AuthProvider';
+import ChefDetailsPage from './Components/Pages/HomePage/ChefDetailsPage/ChefDetailsPage';
 const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
@@ -38,16 +39,21 @@ const router = createBrowserRouter([
         path: '/register',
         element: <Register />
       },
+      {
+        path: '/chefCollection/:id',
+        element: <ChefDetailsPage />,
+        loader: ({ params }) => fetch(`https://chif-zone-server-shakilahmedshuvo.vercel.app/allData/${params.id}`)
+      }
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <QueryClientProvider client={queryClient}>
     <AuthProvider>
-      <QueryClientProvider client={queryClient}>
+      <React.StrictMode>
         <RouterProvider router={router} />
-      </QueryClientProvider>
+      </React.StrictMode>,
     </AuthProvider>
-  </React.StrictMode>,
+  </QueryClientProvider>
 )
