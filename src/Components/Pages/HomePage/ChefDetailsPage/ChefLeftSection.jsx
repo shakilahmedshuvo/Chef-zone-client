@@ -1,8 +1,7 @@
-import { BsStarFill } from "react-icons/bs";
 import RecipeCard from "./RecipeCard";
 
 const ChefLeftSection = ({ data }) => {
-    const { chefImg, name, experience, recipe, likes, bio, img } = data;
+    const { name} = data;
 
     return (
         <div className="mx-8">
