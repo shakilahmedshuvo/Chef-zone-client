@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import ChefRightSection from "./ChefRightSection";
 import ChefLeftSection from "./ChefLeftSection";
+import Recommended from "../Recommended/Recommended";
 
 const ChefDetailsPage = () => {
     const data = useLoaderData();
@@ -69,6 +70,14 @@ const ChefDetailsPage = () => {
 
             </div>
             {/* main details section end */}
+
+
+            {/* Recommended section start */}
+
+            <Recommended />
+
+            {/* Recommended section end */}
+
 
 
         </div>

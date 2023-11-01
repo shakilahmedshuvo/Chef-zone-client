@@ -16,7 +16,7 @@ const Chef = () => {
 
 
     // tan stack for data fetch
-    const { data, isLoading } = useQuery({
+    const { data, isLoading, isError } = useQuery({
         queryKey: ["chefCollection"],
         queryFn: async () => {
             const res = await fetch('http://localhost:5000/chefCollection');
@@ -28,10 +28,15 @@ const Chef = () => {
             Loading . . .
         </p>
     }
+    if (isError) {
+        return <p className="text-center text-yellow-400 text-4xl my-10">
+            Something went wrong. . .
+        </p>
+    }
 
 
     return (
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto mb-16">
             <SectionTitle
                 heading={"Our Chef Zone Chef's"}
                 subHeading={"Our chefs headed by Chef Linguini cook with love with the freshest and highest quality ingredients mostly from our farm"}
@@ -40,7 +45,7 @@ const Chef = () => {
             {/* card map section start */}
             <div className="grid lg:grid-cols-3 mt-8">
                 {
-                    data.map((data) => (
+                    data?.map((data) => (
                         <ChefSingleCard
                             key={data._id}
                             data={data}
