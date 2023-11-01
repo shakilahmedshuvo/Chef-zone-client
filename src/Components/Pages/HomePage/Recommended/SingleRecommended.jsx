@@ -5,7 +5,7 @@ const SingleRecommended = ({ data }) => {
 
     return (
         <div
-            className="mt-10 mx-4 bg-gray-50 shadow-xl h-fit py-2 pb-6 rounded-2xl">
+            className="group mt-10 mx-4 bg-gray-50 shadow-xl h-fit py-2 pb-6 rounded-2xl">
             <div className="flex px-4 py-4">
                 <div className="w-[35%]">
                     <img
@@ -31,7 +31,7 @@ const SingleRecommended = ({ data }) => {
             </div>
 
 
-            <p className="border-2  font-black rounded-lg mx-4">
+            <p className="border-2  font-black rounded-lg mx-4 group-hover:bg-gray-900 group-hover:text-white duration-500">
                 <Link
                     to={"/"}
                     className="flex items-center justify-center py-2 w-full">

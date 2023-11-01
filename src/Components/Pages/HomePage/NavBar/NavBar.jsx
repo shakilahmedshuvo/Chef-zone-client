@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// import useAuth from "../../../Utilites/Hooks/useAuth";
+import logo from "../../../../../public/logo.png";
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { HiMenuAlt2 } from "react-icons/hi";
@@ -22,58 +22,81 @@ const NavBar = () => {
 
 
     return (
-        <div className="">
+        <div>
 
             {/* lg device start */}
-            <div
-                className="max-w-7xl mx-auto hidden lg:block">
-                <div
-                    className="grid grid-cols-12">
-                    {/* this is navbar routes start */}
+            <div>
+                <div className="max-w-7xl mx-auto hidden lg:block">
+
+                    {/* lg navbar section start */}
                     <div
-                        className="col-span-8">
-                        <div
-                            className="flex items-center font-bold">
+                        className="grid grid-cols-12 py-3">
+
+                        <div className="col-span-2 flex items-center  justify-center">
                             <Link
-                                className="/">
+                                className="w-[150px] py-2 px-4 rounded-lg"
+                                to={"/"}>
                                 <img
-                                    className="w-[138px]"
-                                    // src={logo}
+                                    src={logo}
                                     alt="" />
                             </Link>
+                        </div>
+
+
+                        {/* <div className="col-span-4 flex">
+                       
+                    </div> */}
+
+
+
+
+                        <div className="col-span-8 flex items-center justify-end text-gray-500 font-black">
+                            {/* <input
+                            className="text-sm border-2 border-gray-200 rounded-md focus:border focus:ring-0 focus:border-gray-300 px-4 w-72 py-2"
+                            placeholder="Search Chef's"
+                            name="search"
+                            type="text" />
+                        <p
+                            className="font-black bg-yellow-400 text-white py-2 rounded-md px-5 ms-2 w-fit">
+                            Search
+                        </p> */}
+
                             <p
                                 className="mx-5 flex items-center">
-                                Solutions <IoIosArrowDown className="ms-2 text-blue-600 font-extrabold" />
+                                Solutions <IoIosArrowDown className="ms-2 text-yellow-500 font-extrabold" />
                             </p>
                             <p
                                 className="mx-5 flex items-center">
-                                Features <IoIosArrowDown className="ms-2 text-blue-600 font-extrabold" />
+                                Features <IoIosArrowDown className="ms-2 text-yellow-500 font-extrabold" />
                             </p>
                             <p
                                 className="mx-5 flex items-center">
-                                Blogs <IoIosArrowDown className="ms-2 text-blue-600 font-extrabold" />
+                                Blogs <IoIosArrowDown className="ms-2 text-yellow-500 font-extrabold" />
                             </p>
                             <p
                                 className="mx-5 flex items-center">
-                                About <IoIosArrowDown className="ms-2 text-blue-600 font-extrabold" />
+                                About <IoIosArrowDown className="ms-2 text-yellow-500 font-extrabold" />
+                            </p>
+
+                        </div>
+                        {/* lg navbar section end */}
+
+
+                        {/* login register btn start */}
+                        <div
+                            className="col-span-2 flex items-center justify-end">
+                            <p
+                                className="text-[#0076CE] font-bold rounded-lg border-2 border-blue-500 px-5 py-2 mr-4">
+                                Login
+                            </p>
+                            <p
+                                className="bg-[#0076CE] font-semibold text-white px-4 py-2 rounded-lg">
+                                Register
                             </p>
                         </div>
-                    </div>
-                    {/* this is navbar routes end */}
 
-                    {/* login register btn start */}
-                    <div
-                        className="col-span-4 flex items-center justify-end">
-                        <p
-                            className="text-[#0076CE] font-bold rounded-lg border-2 border-blue-500 px-5 py-2 mr-4">
-                            Login
-                        </p>
-                        <p
-                            className="bg-[#0076CE] font-semibold text-white px-4 py-2 rounded-lg">
-                            Register
-                        </p>
+                        {/* login register btn end */}
                     </div>
-                    {/* login register btn end */}
                 </div>
             </div>
             {/* lg device end */}
