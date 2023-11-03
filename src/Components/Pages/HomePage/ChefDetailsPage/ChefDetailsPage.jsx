@@ -9,7 +9,7 @@ const ChefDetailsPage = () => {
     // const { chefImg, name, experience, recipe, likes, bio, img } = data;
 
     return (
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto pt-12">
 
             {/* page header section start */}
             <>

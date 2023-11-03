@@ -25,32 +25,25 @@ const NavBar = () => {
         <div>
 
             {/* lg device start */}
-            <div>
-                <div className="max-w-7xl mx-auto hidden lg:block">
+            <div className="w-full fixed z-30 top-0 bg-white bg-opacity-95">
+                <div className="max-w-7xl mx-auto hidden lg:block ">
 
                     {/* lg navbar section start */}
                     <div
-                        className="grid grid-cols-12 py-3">
+                        className="grid grid-cols-12 py-1">
 
                         <div className="col-span-2 flex items-center  justify-center">
                             <Link
-                                className="w-[150px] py-2 px-4 rounded-lg"
-                                to={"/"}>
+                                to={"/"}
+                                className="w-[150px] py-2 px-4 rounded-lg">
                                 <img
                                     src={logo}
                                     alt="" />
                             </Link>
                         </div>
 
-
-                        {/* <div className="col-span-4 flex">
-                       
-                    </div> */}
-
-
-
-
-                        <div className="col-span-8 flex items-center justify-end text-gray-500 font-black">
+                        <div
+                            className="col-span-8 flex items-center justify-end text-gray-500 font-black">
                             {/* <input
                             className="text-sm border-2 border-gray-200 rounded-md focus:border focus:ring-0 focus:border-gray-300 px-4 w-72 py-2"
                             placeholder="Search Chef's"
