@@ -2,11 +2,11 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaSnapchatSquare } from "react-ico
 
 const Footer = () => {
     return (
-        <div className='bg-black text-white pb-10 pt-5'>
+        <div className='bg-black text-white pb-10 lg:pt-5'>
             {/* footer section */}
-            <div className='container mx-auto mt-5 p-5'>
+            <div className='container mx-auto mt-5 lg:p-5'>
 
-                <div className='grid grid-cols-12 px-12 py-8'>
+                <div className='grid lg:grid-cols-12 px-12 py-8'>
 
                     <div className='col-span-3 text-gray-500 text-end font-black text-sm'>
                         Chef Taylor Bondsman, working in

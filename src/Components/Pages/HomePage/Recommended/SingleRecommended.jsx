@@ -5,7 +5,7 @@ const SingleRecommended = ({ data }) => {
 
     return (
         <div
-            className="group mt-10 mx-4 bg-gray-50 shadow-xl h-fit py-2 pb-6 rounded-2xl">
+            className="group mt-4 lg:mt-10 mx-2 lg:mx-4 bg-gray-50 shadow-xl h-fit py-2 pb-6 rounded-2xl">
             <div className="flex px-4 py-4">
                 <div className="w-[35%]">
                     <img

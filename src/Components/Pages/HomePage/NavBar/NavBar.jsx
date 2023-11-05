@@ -44,15 +44,6 @@ const NavBar = () => {
 
                         <div
                             className="col-span-8 flex items-center justify-end text-gray-500 font-black">
-                            {/* <input
-                            className="text-sm border-2 border-gray-200 rounded-md focus:border focus:ring-0 focus:border-gray-300 px-4 w-72 py-2"
-                            placeholder="Search Chef's"
-                            name="search"
-                            type="text" />
-                        <p
-                            className="font-black bg-yellow-400 text-white py-2 rounded-md px-5 ms-2 w-fit">
-                            Search
-                        </p> */}
 
                             <p
                                 className="mx-5 flex items-center">
@@ -151,36 +142,31 @@ const NavBar = () => {
                             <ul>
                                 <li
                                     className="py-3 hover:underline">
-                                    <Link
-                                        href="/">
+                                    <Link>
                                         Home
                                     </Link>
                                 </li>
                                 <li
                                     className="py-3 hover:underline">
-                                    <Link
-                                        href="">
+                                    <Link>
                                         Solutions
                                     </Link>
                                 </li>
                                 <li
                                     className="py-3 hover:underline">
-                                    <Link
-                                        href="/hrjobs">
+                                    <Link>
                                         Features
                                     </Link>
                                 </li>
                                 <li
                                     className="py-3 hover:underline">
-                                    <Link
-                                        href="/seekers">
+                                    <Link>
                                         Blogs
                                     </Link>
                                 </li>
                                 <li
                                     className="py-3 hover:underline">
-                                    <Link
-                                        href="/blogs">
+                                    <Link>
                                         About
                                     </Link>
                                 </li>

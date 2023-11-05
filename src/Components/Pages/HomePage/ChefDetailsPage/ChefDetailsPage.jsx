@@ -9,25 +9,25 @@ const ChefDetailsPage = () => {
     // const { chefImg, name, experience, recipe, likes, bio, img } = data;
 
     return (
-        <div className="max-w-7xl mx-auto pt-12">
+        <div className="max-w-7xl mx-auto lg:pt-12">
 
             {/* page header section start */}
             <>
-                <div className="flex justify-end items-center mt-10">
+                <div className="flex justify-center lg:justify-end items-center lg:mt-10 mt-5">
                     <p className='text-white bg-yellow-400 w-fit font-black rounded-full px-6 py-2 text-xs'>
                         Recommended
                     </p>
                 </div>
 
-                <h1 className='text-3xl text-center text-gray-500 font-extrabold'>
+                <h1 className='text-xl lg:text-3xl text-center text-gray-500 font-extrabold lg:my-0 my-4'>
                     {name} Info & Recipes Details
                 </h1>
             </>
 
-            <div className="grid grid-cols-12 mt-7 mb-4">
+            <div className="grid lg:grid-cols-12 lg:mt-7 mb-4">
 
                 <div className="col-span-4 flex items-center justify-center">
-                    <div className="border-t-2 mt-4 w-[90%]">
+                    <div className="border-t-2 lg:my-0 my-4 lg:mt-4 w-[90%]">
                         <hr />
                     </div>
                 </div>
@@ -48,11 +48,11 @@ const ChefDetailsPage = () => {
             {/* page header section end */}
 
             {/* main details section start */}
-            <div className="grid grid-cols-12 mt-16">
+            <div className="grid lg:grid-cols-12 mt-8 lg:mt-16">
 
 
                 {/* right side div start */}
-                <div className="col-span-4">
+                <div className="col-span-12 lg:col-span-4">
                     <ChefRightSection
                         data={data}
                     ></ChefRightSection>
@@ -61,7 +61,7 @@ const ChefDetailsPage = () => {
 
 
                 {/* left side div start */}
-                <div className="col-span-8">
+                <div className="col-span-12 lg:col-span-8">
                     <ChefLeftSection
                         data={data}
                     ></ChefLeftSection>

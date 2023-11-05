@@ -4,14 +4,14 @@ const RecipeCard = ({ data }) => {
     const { recipe } = data;
 
     return (
-        <div className="mx-5">
+        <div className="lg:mx-5 mx-2">
 
             {/* first RecipeCard start  */}
-            <div className="border-s-4 mt-10 group group/item">
+            <div className="lg:border-s-4 mt-10 group group/item">
 
-                <div className="grid grid-cols-12">
+                <div className="grid lg:grid-cols-12">
 
-                    <div className="col-span-8 px-4">
+                    <div className="col-span-12 lg:col-span-8 lg:px-4">
                         <h2 className="text-yellow-400 font-bold text-2xl mt-3">
                             Recipe Name: {recipe?.first?.name}
                         </h2>
@@ -26,7 +26,7 @@ const RecipeCard = ({ data }) => {
 
                         <div className="text-gray-500 mt-3 font-black">
                             Ingredients:
-                            <div className="grid grid-cols-12 mt-3 px-4">
+                            <div className="grid grid-cols-12 mt-3 px-0 lg:px-4">
 
                                 {/* 1 */}
                                 <h2 className="col-span-4 flex items-center text-sm">
@@ -79,13 +79,13 @@ const RecipeCard = ({ data }) => {
                             </div>
                         </div>
 
-                        <p className="text-gray-500 font-semibold text-center text-base flex items-center mt-8">
+                        <p className="text-gray-500 font-semibold text-center text-base flex items-center justify-center lg:justify-center mt-8">
                             <PiStarDuotone className="text-2xl mr-1 text-yellow-400" /> Recipe's Ratings:   {recipe?.first?.ratings}
                         </p>
                     </div>
 
 
-                    <div className="col-span-4">
+                    <div className="col-span-12 lg:col-span-4 px-4 lg:px-0">
 
                         <img
                             className="rounded-md mt-4"
@@ -103,11 +103,11 @@ const RecipeCard = ({ data }) => {
 
 
             {/* second RecipeCard start */}
-            <div className="border-s-4 my-14 group group/item">
+            <div className="lg:border-s-4 my-14 group group/item">
 
-                <div className="grid grid-cols-12">
+                <div className="grid lg:grid-cols-12">
 
-                    <div className="col-span-8 px-4">
+                    <div className="col-span-12 lg:col-span-8 lg:px-4">
                         <h2 className="text-yellow-400 font-bold text-2xl mt-3">
                             Recipe Name: {recipe?.second?.name}
                         </h2>
@@ -121,7 +121,7 @@ const RecipeCard = ({ data }) => {
 
                         <div className="text-gray-500 mt-3 font-black">
                             Ingredients:
-                            <div className="grid grid-cols-12 mt-3 px-4">
+                            <div className="grid grid-cols-12 mt-3 px-0 lg:px-4">
 
                                 {/* 1 */}
                                 <h2 className="col-span-4 flex items-center text-sm">
@@ -182,7 +182,7 @@ const RecipeCard = ({ data }) => {
                     </div>
 
 
-                    <div className="col-span-4">
+                    <div className="col-span-12 lg:col-span-4 px-4 lg:px-0">
 
                         <img
                             className="rounded-md mt-4"
@@ -199,11 +199,11 @@ const RecipeCard = ({ data }) => {
             {/* second RecipeCard end */}
 
             {/* third RecipeCard start */}
-            <div className="border-s-4 mb-16 group group/item">
+            <div className="lg:border-s-4 my-14 group group/item">
 
-                <div className="grid grid-cols-12">
+                <div className="grid lg:grid-cols-12">
 
-                    <div className="col-span-8 px-4">
+                    <div className="col-span-12 lg:col-span-8 lg:px-4">
                         <h2 className="text-yellow-400 font-bold text-2xl mt-3">
                             Recipe Name: {recipe?.third?.name}
                         </h2>
@@ -217,7 +217,7 @@ const RecipeCard = ({ data }) => {
 
                         <div className="text-gray-500 mt-3 font-black">
                             Ingredients:
-                            <div className="grid grid-cols-12 mt-3 px-4">
+                            <div className="grid grid-cols-12 mt-3 px-0 lg:px-4">
 
                                 {/* 1 */}
                                 <h2 className="col-span-4 flex items-center text-sm">
@@ -275,7 +275,7 @@ const RecipeCard = ({ data }) => {
                     </div>
 
 
-                    <div className="col-span-4">
+                    <div className="col-span-12 lg:col-span-4 px-4 lg:px-0">
 
                         <img
                             className="rounded-md mt-4"

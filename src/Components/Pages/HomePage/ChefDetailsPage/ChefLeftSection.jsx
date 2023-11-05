@@ -4,7 +4,7 @@ const ChefLeftSection = ({ data }) => {
     const { name} = data;
 
     return (
-        <div className="mx-8">
+        <div className="lg:mx-8">
             <>
                 <h2 className="text-3xl text-gray-500 font-semibold text-center">
                     {name} Recipe's

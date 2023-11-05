@@ -6,12 +6,10 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import BannerBgOne from "../../../../assets/BannerImg/bg-one.png";
 import BannerBgTwo from "../../../../assets/BannerImg/bg-two.png";
 import BannerBgThree from "../../../../assets/BannerImg/bg-three.png";
-import { Link } from 'react-router-dom';
 import { IoLeafSharp } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
 import { BiSolidTimeFive } from "react-icons/bi";
 import { BsFillSuitHeartFill } from "react-icons/bs";
-import { PiGraduationCap } from "react-icons/pi";
 import { LuVegan } from "react-icons/lu";
 import { GiFruitBowl } from "react-icons/gi";
 
@@ -43,7 +41,7 @@ const Banner = () => {
                         tester & easier with us!
                     </p>
 
-                    <div className='ms-12 mt-8'>
+                    <div className='ms-12 mt-14'>
                         <h2 className='text-xl font-black text-gray-700 mb-3'>
                             What to cook today?
                         </h2>
@@ -54,7 +52,7 @@ const Banner = () => {
                                 name="search"
                                 type="text" />
                             <p
-                                className="font-black bg-black text-white py-3 rounded-md px-8 ms-2 w-fit">
+                                className="font-black bg-yellow-400 text-white py-2 rounded-md px-8 ms-2 w-fit text-lg">
                                 Search
                             </p>
                         </div>
@@ -75,6 +73,7 @@ const Banner = () => {
                         modules={[Autoplay, Pagination, Navigation]}
                         className="mySwiper">
 
+                        {/* first banner start */}
                         <SwiperSlide>
                             <img
                                 className='w-full rounded-xl'
@@ -125,8 +124,10 @@ const Banner = () => {
                                     alt="" />
                             </div>
                         </SwiperSlide>
+                        {/* first banner end */}
 
 
+                        {/* second banner start */}
                         <SwiperSlide>
                             <img
                                 className='w-full rounded-xl'
@@ -177,9 +178,10 @@ const Banner = () => {
                                     alt="" />
                             </div>
                         </SwiperSlide>
+                        {/* second banner end */}
 
 
-
+                        {/* third banner start */}
                         <SwiperSlide>
                             <img
                                 className='w-full rounded-xl'
@@ -230,35 +232,15 @@ const Banner = () => {
                                     alt="" />
                             </div>
                         </SwiperSlide>
-
-                        {/* <SwiperSlide>
-                        <img
-                            className='w-full rounded-xl'
-                            src="https://img.freepik.com/free-photo/fresh-seafood-rustic-wooden-plate-generative-ai_188544-8434.jpg?w=1380&t=st=1699161422~exp=1699162022~hmac=db6476bb04d4131288ab620dc3eadb7ddbe0ca4df46d82b347004a050c7bb151"
-                            alt="" />
-                        <div className='relative bottom-24 text-7xl text-white'>
-                            this is ht
-                        </div>
-                    </SwiperSlide> */}
-
-                        {/* <SwiperSlide>
-                        <img
-                            className='w-full rounded-xl'
-                            src="https://img.freepik.com/free-photo/close-up-gourmet-meal-with-fresh-organic-vegetables-generative-ai_188544-8300.jpg?w=1380&t=st=1699161415~exp=1699162015~hmac=f522b650a2bcedd64c43168d0454e487754687795b565ef3de4effbf43045ad2"
-                            alt="" />
-                        <div className='relative bottom-24 text-7xl text-white'>
-                            this is ht
-                        </div>
-                    </SwiperSlide> */}
-
+                        {/* third banner end */}
 
 
                     </Swiper>
                 </div>
                 {/* banner swiper section end */}
-
             </div>
 
+            {/*  */}
 
 
         </div>

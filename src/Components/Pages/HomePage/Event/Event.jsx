@@ -26,7 +26,7 @@ const Event = () => {
             {/* Marquee end */}
             {/* Upcoming events start */}
 
-            <div className="grid grid-cols-12 mt-10">
+            <div className="grid lg:grid-cols-12 mt-10">
 
                 <div className='col-span-8 mt-5'>
                     <h3 className='text-yellow-400 font-black text-2xl'>
@@ -48,7 +48,7 @@ const Event = () => {
                     </button>
                 </div>
 
-                <div className="col-span-4">
+                <div className="col-span-12 lg:col-span-4">
                     <img
                         className='w-100 mt-5 rounded-md'
                         src="https://img.freepik.com/free-psd/asian-delicious-food-social-media-template_505751-2967.jpg?w=740&t=st=1683034579~exp=1683035179~hmac=303cf97633ebb29ee7efb876a3176c5b09f059652f1b1960af6da031c65f3913"
@@ -57,9 +57,9 @@ const Event = () => {
 
             </div>
 
-            <div className='grid grid-cols-12 mt-10'>
+            <div className='grid lg:grid-cols-12 mt-10'>
 
-                <div className="col-span-4">
+                <div className="col-span-12 lg:col-span-4">
                     <img
                         className='w-100 mt-5 rounded-md'
                         src="https://img.freepik.com/free-psd/delicious-food-menu-social-media-template_505751-3001.jpg?w=740&t=st=1683034680~exp=1683035280~hmac=426f6798549456db26e7c032e30cce9b6bb301bd0b3c229dd127f612d8d2b12c"
@@ -67,7 +67,7 @@ const Event = () => {
                 </div>
 
 
-                <div className='col-span-8 mt-8 ms-10'>
+                <div className='col-span-12 lg:col-span-8 mt-8 lg:ms-10'>
                     <h3 className='text-yellow-400 font-black text-2xl'>
                         06/08/2024 — 12/08/2024
                     </h3>

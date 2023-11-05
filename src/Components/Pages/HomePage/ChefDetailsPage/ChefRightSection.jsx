@@ -16,19 +16,19 @@ const ChefRightSection = ({ data }) => {
             <hr className="my-6 border-t-2" />
 
             <img
-                className="rounded-lg"
+                className="rounded-lg px-14 lg:px-0"
                 src={chefImg}
                 alt="" />
             <h2 className="text-2xl text-yellow-400 font-semibold mt-6 ms-1">
                 Chef Name: {name}
             </h2>
-            <div className="border-s-4 ps-4 mt-3">
+            <div className="border-s-4 lg:ps-4 lg:mt-3">
 
-                <p className="text-gray-500 font-semibold text-sm pt-2 leading-6">
+                <p className="text-gray-500 font-semibold text-sm pt-2 leading-6 px-2 lg:px-0">
                     {bio}
                 </p>
 
-                <div className="flex justify-between items-center ms-1 mt-4">
+                <div className="flex justify-between items-center lg:ms-1 mt-4 mx-3 lg:mx-0">
                     <p className="text-base font-semibold text-gray-500">
                         Experience: {experience}
                     </p>
@@ -40,7 +40,7 @@ const ChefRightSection = ({ data }) => {
                 <>
 
                     {/* rating section start */}
-                    <div className='flex items-center text-gray-500 mt-3'>
+                    <div className='flex items-center justify-center  lg:justify-start text-gray-500 mt-3'>
                         <Rating
                             className='text-4xl mb-2'
                             stop={1}
@@ -57,9 +57,11 @@ const ChefRightSection = ({ data }) => {
 
                 </>
             </div>
-            <div
-                className='bg-gray-900 hover:bg-gray-800 text-white font-black w-full text-center py-4 rounded-lg mt-5 mb-10'>
-                View Recipes
+            <div className="lg:px-0 px-4">
+                <div
+                    className='bg-gray-900 hover:bg-gray-800 text-white font-black w-full text-center py-4 rounded-lg lg:mt-5 mb-10'>
+                    View Recipes
+                </div>
             </div>
         </>
     );
