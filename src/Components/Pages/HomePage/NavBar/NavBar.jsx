@@ -26,7 +26,7 @@ const NavBar = () => {
 
             {/* lg device start */}
             <div className="w-full fixed z-30 top-0 bg-white bg-opacity-95">
-                <div className="max-w-7xl mx-auto hidden lg:block ">
+                <div className="container mx-auto hidden lg:block ">
 
                     {/* lg navbar section start */}
                     <div
