@@ -4,21 +4,22 @@ import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { IoMdCloseCircleOutline } from "react-icons/io";
+import useAuth from "../../../Utilites/Hooks/useAuth";
 
 const NavBar = () => {
-    // const { user, userLogOut } = useAuth();
+    const { user, userLogOut } = useAuth();
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
     // logoutHandle function
-    // const logoutHandle = () => {
-    //     userLogOut()
-    //         .then(result => {
-    //         })
-    //         .catch(error => {
-    //             // console.log(error);
-    //         })
-    // };
+    const logoutHandle = () => {
+        userLogOut()
+            .then(result => {
+            })
+            .catch(error => {
+                // console.log(error);
+            })
+    };
 
 
     return (
@@ -43,7 +44,7 @@ const NavBar = () => {
                         </div>
 
                         <div
-                            className="col-span-8 flex items-center justify-end text-gray-500 font-black">
+                            className="col-span-9 flex items-center justify-end text-gray-500 font-black">
 
                             <p
                                 className="mx-5 flex items-center">
@@ -66,20 +67,53 @@ const NavBar = () => {
                         {/* lg navbar section end */}
 
 
-                        {/* login register btn start */}
-                        <div
-                            className="col-span-2 flex items-center justify-end">
-                            <p
-                                className="text-[#0076CE] font-bold rounded-lg border-2 border-blue-500 px-5 py-2 mr-4">
-                                Login
-                            </p>
-                            <p
-                                className="bg-[#0076CE] font-semibold text-white px-4 py-2 rounded-lg">
-                                Register
-                            </p>
+                        {/* conditional rendering for user and login start */}
+                        <div className="col-span-1 flex items-center justify-end">
+                            {
+                                user ?
+                                    <>
+
+                                        {/* tooltip show and the profile picture */}
+                                        <div
+                                            className="tooltip tooltip-warning tooltip-bottom flex justify-center items-center font-bold"
+                                            data-tip={user.displayName}>
+                                            <img
+                                                className="w-12 h-12 rounded-full"
+                                                src=
+                                                {
+                                                    user?.photoURL
+                                                }
+                                                alt="" />
+                                        </div>
+                                        <p className="text-lg">
+                                            <Link
+                                                // onClick={handleLogOut}
+                                                className="btn-ghost">
+                                                Log Out
+                                                {/* <FiLogOut
+                                                className="text-2xl text-slate-200">
+                                            </FiLogOut> */}
+                                            </Link>
+                                        </p>
+                                    </>
+                                    :
+                                    <>
+                                        <p>
+                                            <Link
+                                                to="/login"
+                                                className="text-yellow-500 font-bold rounded-lg border-2 border-yellow-500 px-5 py-2 mr-4">
+                                                Log In
+                                                {/* <FiLogIn
+                                                className="text-2xl text-slate-200">
+                                            </FiLogIn> */}
+                                            </Link>
+                                        </p>
+                                    </>
+                            }
                         </div>
 
-                        {/* login register btn end */}
+                        {/* conditional rendering for user and login end */}
+
                     </div>
                 </div>
             </div>
@@ -91,7 +125,7 @@ const NavBar = () => {
             <div
                 className="lg:hidden block">
                 <div
-                    className="cursor-pointer grid grid-cols-12 items-center">
+                    className="cursor-pointer grid grid-cols-12 items-center py-1">
                     <div
                         onClick={toggleMenu}
                         className="col-span-2 flex items-starts justify-center">
@@ -102,7 +136,7 @@ const NavBar = () => {
                         className="col-span-8 flex items-center justify-center">
                         <img
                             className="w-[140px]"
-                            // src={logo}
+                            src={logo}
                             alt="" />
                     </Link>
                     <div className="col-span-2 mr-1">
@@ -114,9 +148,9 @@ const NavBar = () => {
                     <div
                         className={
                             menuOpen ?
-                                "fixed top-0 left-0 w-[75%] sm:hidden h-screen p-10 ease-in-out duration-500 footerBg"
+                                "fixed top-0 left-0 w-[75%] sm:hidden h-screen p-10 ease-in-out duration-500 bg-gray-950"
                                 :
-                                "fixed left-[-100%] top-0 p-10 sm:hidden h-screen ease-in-out duration-500 footerBg"
+                                "fixed left-[-100%] top-0 p-10 sm:hidden h-screen ease-in-out duration-500"
                         }>
                         {/* cross sine */}
                         <div
@@ -125,7 +159,7 @@ const NavBar = () => {
                                 <Link className="/">
                                     <img
                                         className="w-[138px]"
-                                        // src={FooterLogo}
+                                        src={logo}
                                         alt="" />
                                 </Link>
                             </div>
