@@ -5,6 +5,8 @@ import { IoIosArrowDown } from "react-icons/io";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import useAuth from "../../../Utilites/Hooks/useAuth";
+import defaultImg from "../../../../assets/defultImage.png";
+import { FiLogOut } from "react-icons/fi";
 
 const NavBar = () => {
     const { user, userLogOut } = useAuth();
@@ -43,7 +45,7 @@ const NavBar = () => {
                         </div>
 
                         <div
-                            className="col-span-9 flex items-center justify-end text-gray-500 font-black">
+                            className="col-span-10 flex items-center justify-end text-gray-500 font-black">
 
                             <p
                                 className="mx-5 flex items-center">
@@ -62,62 +64,61 @@ const NavBar = () => {
                                 About <IoIosArrowDown className="ms-2 text-yellow-500 font-extrabold" />
                             </p>
 
-                        </div>
-                        {/* lg navbar section end */}
-
-
-                        {/* conditional rendering for user and login start */}
-                        <div className="col-span-1 flex items-center justify-end">
+                            {/* conditional rendering for user and login start */}
                             {
                                 user ?
                                     <>
-
-                                        {/* tooltip show and the profile picture */}
+                                        {/* dropdown start */}
                                         <div
-                                            className="tooltip tooltip-warning tooltip-bottom flex justify-center items-center font-bold"
-                                            data-tip={user.displayName}>
+                                            className="dropdown dropdown-end dropdown-hover mx-2">
                                             <img
                                                 className="w-12 h-12 rounded-full"
                                                 src=
                                                 {
-                                                    user?.photoURL
+                                                    user?.photoURL || defaultImg
                                                 }
                                                 alt="" />
+                                            <ul
+                                                tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow rounded-box w-52 flex items-center justify-center font-black bg-slate-50">
+
+                                                <li className="bg-yellow-400 px-3 py-1 text-white rounded-lg mb-1">
+                                                    Welcome {user?.displayName}
+                                                </li>
+
+                                                <li>
+                                                    <Link
+                                                        onClick={handleLogOut}
+                                                        className="flex items-center text-base">
+                                                        Log Out
+                                                        <FiLogOut
+                                                            className="text-xl">
+                                                        </FiLogOut>
+                                                    </Link>
+                                                </li>
+
+                                            </ul>
                                         </div>
-                                        <p className="text-lg">
-                                            <Link
-                                                onClick={handleLogOut}
-                                                className="">
-                                                Log Out
-                                                {/* <FiLogOut
-                                                className="text-2xl text-slate-200">
-                                            </FiLogOut> */}
-                                            </Link>
-                                        </p>
+                                        {/* dropdown end */}
+
                                     </>
                                     :
                                     <>
                                         <p>
                                             <Link
                                                 to="/login"
-                                                className="text-yellow-500 font-bold rounded-lg border-2 border-yellow-500 px-5 py-2 mr-4">
+                                                className="text-yellow-400 font-bold rounded-lg border-2 border-yellow-400 px-5 py-2 mr-4 hover:text-white hover:bg-yellow-400 cursor-pointer duration-500">
                                                 Log In
-                                                {/* <FiLogIn
-                                                className="text-2xl text-slate-200">
-                                            </FiLogIn> */}
                                             </Link>
                                         </p>
                                     </>
                             }
                         </div>
-
                         {/* conditional rendering for user and login end */}
 
                     </div>
                 </div>
-            </div>
-            {/* lg device end */}
-
+            </div >
+            {/* lg navbar section end */}
 
             {/* sm device start */}
 
@@ -223,7 +224,7 @@ const NavBar = () => {
 
             {/* sm device end */}
 
-        </div>
+        </div >
     );
 };
 

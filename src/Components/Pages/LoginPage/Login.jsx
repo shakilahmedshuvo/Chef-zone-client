@@ -84,7 +84,7 @@ const Login = () => {
                             className="relative bottom-14 right-28 flex items-center justify-end">
                             <p
                                 onClick={() => setShow(!show)}
-                                className="relative top-7 right-9 text-2xl px-6 py-1 flex items-center  h-6">
+                                className="relative top-7 right-9 text-2xl px-6 py-1 flex items-center h-6 cursor-pointer">
                                 <small>
                                     {
                                         show ?
