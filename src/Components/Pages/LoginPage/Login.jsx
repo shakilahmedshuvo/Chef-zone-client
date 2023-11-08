@@ -3,6 +3,7 @@ import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
 import useAuth from "../../Utilites/Hooks/useAuth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import SocialLogin from "../../Utilites/Shared/SocialLogin";
 
 const Login = () => {
     // show pass and hide pass
@@ -114,21 +115,33 @@ const Login = () => {
                     {/* input field section end */}
 
                     {/* social login start*/}
-                    <div className="ms-9 mt-3 flex items-center justify-center">
+                    <div className="ms-9 mt-3">
 
                         {/* or div start */}
-                        <div className="grid grid-cols-12 w-80">
-                            <div className="col-span-5 mt-4">
-                                <hr className="border border-gray-300" />
-                            </div>
-                            <div className="col-span-2 flex items-center justify-center text-gray-500 font-black text-lg">
-                                or
-                            </div>
-                            <div className="col-span-5 mt-4">
-                                <hr className="border border-gray-300" />
+                        <div className="flex items-center justify-center mt-5 mb-3">
+                            <div className="grid grid-cols-12 w-80">
+                                <div className="col-span-5 mt-4">
+                                    <hr className="border border-gray-300" />
+                                </div>
+                                <div className="col-span-2 flex items-center justify-center text-gray-500 font-black text-lg">
+                                    or
+                                </div>
+                                <div className="col-span-5 mt-4">
+                                    <hr className="border border-gray-300" />
+                                </div>
                             </div>
                         </div>
                         {/* or div end */}
+
+
+                        {/* social login start */}
+                        <SocialLogin />
+                        {/* social login end */}
+
+
+                        <div>
+
+                        </div>
 
                     </div>
                     {/* social login end*/}
