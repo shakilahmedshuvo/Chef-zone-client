@@ -55,7 +55,7 @@ const SocialLogin = () => {
                 {/* google login start */}
                 <div
                     onClick={handleGoogleSignIn}
-                    className="col-span-6 flex items-center justify-end pr-5">
+                    className="col-span-6 flex items-center justify-end pr-5 cursor-pointer">
                     <FcGoogle
                         className='text-4xl' />
                     <p
@@ -68,7 +68,7 @@ const SocialLogin = () => {
                 {/* github login start */}
                 <div
                     onClick={gitHubLogin}
-                    className="col-span-6 flex items-center ps-5">
+                    className="col-span-6 flex items-center ps-5 cursor-pointer">
                     <FaGithub
 
                         className='text-3xl' />

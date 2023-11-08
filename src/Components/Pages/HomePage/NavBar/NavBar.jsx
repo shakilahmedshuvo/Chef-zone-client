@@ -11,8 +11,8 @@ const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
-    // logoutHandle function
-    const logoutHandle = () => {
+    // handleLogOut function
+    const handleLogOut = () => {
         userLogOut()
             .then(result => {
             })
@@ -20,7 +20,6 @@ const NavBar = () => {
                 // console.log(error);
             })
     };
-
 
     return (
         <div>
@@ -87,8 +86,8 @@ const NavBar = () => {
                                         </div>
                                         <p className="text-lg">
                                             <Link
-                                                // onClick={handleLogOut}
-                                                className="btn-ghost">
+                                                onClick={handleLogOut}
+                                                className="">
                                                 Log Out
                                                 {/* <FiLogOut
                                                 className="text-2xl text-slate-200">
