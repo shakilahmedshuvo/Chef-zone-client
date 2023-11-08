@@ -15,9 +15,9 @@ const Login = () => {
     const from = location.state?.from?.pathname || '/';
 
     return (
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto pt-12 lg:pt-0">
 
-            <div className="grid grid-cols-12">
+            <div className="grid lg:grid-cols-12">
 
                 {/* login img section start */}
                 <div className="col-span-6 lg:block hidden">
@@ -32,18 +32,19 @@ const Login = () => {
                 {/* login text section start */}
                 <form
                     // onSubmit={handleUserLogin}
-                    className="col-span-6 mt-36">
-                    <h2 className="text-yellow-400 text-4xl font-black text-center">
+                    className="col-span-12 lg:col-span-6 mt-6 lg:mt-36">
+                    <h2 className="text-yellow-400 text-2xl lg:text-4xl font-black text-center">
                         Please Login
                     </h2>
 
                     {/* input field section start */}
-                    <div className="font-black ms-44">
+                    <div className="font-black lg:ms-44">
 
                         {/* email start */}
-                        <div className="form-control text-gray-600 mt-6">
+                        <div
+                            className="form-control text-gray-600 mt-6">
                             <label
-                                className="label">
+                                className="label ps-7 lg:ps-0">
                                 <span
                                     className="text-gray-500 font-black text-sm">
                                     Enter Your Email Address
@@ -54,15 +55,16 @@ const Login = () => {
                                 type="text"
                                 // ref={emailRef}
                                 placeholder="Enter Email"
-                                className="input input-bordered h-fit w-80 ps-5 pr-2 py-1 rounded-md"
+                                className="input input-bordered h-fit w-80 ps-5 pr-2 py-1 rounded-md mx-auto lg:mx-0"
                                 required />
                         </div>
                         {/* email end */}
 
                         {/* password start */}
-                        <div className="form-control text-gray-600 mt-3">
+                        <div
+                            className="form-control text-gray-600 lg:mt-3">
                             <label
-                                className="label">
+                                className="label ps-7 lg:ps-0">
                                 <span
                                     className="text-gray-500 font-black text-sm">
                                     Enter Your Password
@@ -77,11 +79,11 @@ const Login = () => {
                                 }
                                 // ref={emailRef}
                                 placeholder="Enter Password"
-                                className="input input-bordered h-fit w-80 ps-5 pr-2 py-1 rounded-md"
+                                className="input input-bordered h-fit w-80 ps-5 pr-2 py-1 rounded-md mx-auto lg:mx-0"
                                 required />
                         </div>
                         <div
-                            className="relative bottom-14 right-28 flex items-center justify-end">
+                            className="relative bottom-14 lg:right-28 flex items-center justify-end">
                             <p
                                 onClick={() => setShow(!show)}
                                 className="relative top-7 right-9 text-2xl px-6 py-1 flex items-center h-6 cursor-pointer">
@@ -105,7 +107,7 @@ const Login = () => {
                         {/* submit btn start */}
                         <div
                             type="submit"
-                            className="w-80 bg-yellow-400 text-white hover:bg-yellow-500 text-lg text-center py-1 rounded-md duration-300 cursor-pointer">
+                            className="w-80 bg-yellow-400 text-white hover:bg-yellow-500 text-lg text-center py-1 rounded-md duration-300 cursor-pointer mx-auto lg:mx-0">
                             Login
                         </div>
                         {/* submit btn end */}
@@ -115,7 +117,7 @@ const Login = () => {
                     {/* input field section end */}
 
                     {/* social login start*/}
-                    <div className="ms-9 mt-3">
+                    <div className="lg:ms-9 mt-3">
 
                         {/* or div start */}
                         <div className="flex items-center justify-center mt-5 mb-3">

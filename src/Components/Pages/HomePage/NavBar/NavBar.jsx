@@ -102,15 +102,11 @@ const NavBar = () => {
 
                                     </>
                                     :
-                                    <>
-                                        <p>
-                                            <Link
-                                                to="/login"
-                                                className="text-yellow-400 font-bold rounded-lg border-2 border-yellow-400 px-5 py-2 mr-4 hover:text-white hover:bg-yellow-400 cursor-pointer duration-500">
-                                                Log In
-                                            </Link>
-                                        </p>
-                                    </>
+                                    <Link
+                                        to="/login"
+                                        className="text-yellow-400 font-bold rounded-lg border-2 border-yellow-400 px-5 py-2 mr-4 hover:text-white hover:bg-yellow-400 cursor-pointer duration-500">
+                                        Log In
+                                    </Link>
                             }
                         </div>
                         {/* conditional rendering for user and login end */}
@@ -125,7 +121,7 @@ const NavBar = () => {
             <div
                 className="lg:hidden block">
                 <div
-                    className="cursor-pointer grid grid-cols-12 items-center py-1">
+                    className="cursor-pointer grid grid-cols-12 items-center py-1 fixed z-30 bg-white w-full bg-opacity-95">
                     <div
                         onClick={toggleMenu}
                         className="col-span-2 flex items-starts justify-center">
@@ -140,15 +136,50 @@ const NavBar = () => {
                             alt="" />
                     </Link>
                     <div className="col-span-2 mr-1">
-                        <p
-                            className="text-[#0076CE] font-bold rounded-lg border-2 border-blue-500 py-2 w-full text-center text-xs">
-                            Login
-                        </p>
+                        {
+                            user ?
+                                <>
+                                    {/* dropdown start */}
+                                    <div
+                                        className="dropdown dropdown-end dropdown-hover mx-2">
+                                        <img
+                                            className="w-12 h-12 rounded-full"
+                                            src=
+                                            {
+                                                user?.photoURL || defaultImg
+                                            }
+                                            alt="" />
+                                        <ul
+                                            tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow rounded-box w-52 flex items-center justify-center font-black bg-slate-50">
+
+                                            <li className="bg-yellow-400 px-3 py-1 text-white rounded-lg mb-1">
+                                                Welcome {user?.displayName}
+                                            </li>
+
+                                            <li>
+                                                <Link
+                                                    onClick={handleLogOut}
+                                                    className="flex items-center text-base">
+                                                    Log Out
+                                                    <FiLogOut
+                                                        className="text-xl">
+                                                    </FiLogOut>
+                                                </Link>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    {/* dropdown end */}
+
+                                </>
+                                :
+                                <> </>
+                        }
                     </div>
                     <div
                         className={
                             menuOpen ?
-                                "fixed top-0 left-0 w-[75%] sm:hidden h-screen p-10 ease-in-out duration-500 bg-gray-950"
+                                "fixed top-0 left-0 w-[75%] sm:hidden h-screen p-10 ease-in-out duration-500 bg-gray-800"
                                 :
                                 "fixed left-[-100%] top-0 p-10 sm:hidden h-screen ease-in-out duration-500"
                         }>
@@ -206,14 +237,16 @@ const NavBar = () => {
                                 </li>
 
                                 <div className="mt-6 grid grid-rows-2 gap-4">
-                                    <p
+                                    <Link
+                                        to={"/login"}
                                         className="border-2 border-white rounded-md text-center font-medium py-2 text-sm">
                                         Login
-                                    </p>
-                                    <p
+                                    </Link>
+                                    <Link
+                                        to={"/register"}
                                         className="border-2 border-white rounded-md text-center font-medium py-2 text-sm bg-white text-black">
                                         Register
-                                    </p>
+                                    </Link>
                                 </div>
 
                             </ul>

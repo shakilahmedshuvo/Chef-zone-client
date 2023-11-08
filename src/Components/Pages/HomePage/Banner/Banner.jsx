@@ -15,22 +15,22 @@ import { GiFruitBowl } from "react-icons/gi";
 
 const Banner = () => {
     return (
-        <div className="container mx-auto mt-16">
+        <div className="container mx-auto pt-16">
 
 
             <div className='grid grid-cols-12'>
 
                 {/* banner text section start */}
-                <div className='col-span-5'>
+                <div className='lg:col-span-5 col-span-12'>
 
-                    <h2 className='text-7xl font-black mt-16 ms-10'>
+                    <h2 className='text-4xl lg:text-7xl font-black lg:mt-16 lg:ms-10 mx-5'>
                         Fun and Easy
                         <br />
                         To become
                         <br />
                         <span className='text-yellow-400'>Master Cook</span>
                     </h2>
-                    <p className='ms-10 mt-8 font-semibold text-gray-500'>
+                    <p className='lg:ms-10 mt-4 lg:mt-8 font-semibold text-gray-500 mx-2 lg:mx-0'>
                         lets's join us to become expert in every kind of cuisine with a fun way to learn...
                         <br />
                         Providing various easy-to-follow recipes from all over the world & five-star
@@ -41,8 +41,8 @@ const Banner = () => {
                         tester & easier with us!
                     </p>
 
-                    <div className='ms-12 mt-14'>
-                        <h2 className='text-xl font-black text-gray-700 mb-3'>
+                    <div className='lg:ms-12 lg:mt-14 mt-3 mx-4 lg:mx-0'>
+                        <h2 className='lg:text-xl font-black text-gray-700 mb-3'>
                             What to cook today?
                         </h2>
                         <div className='flex items-center'>
@@ -52,7 +52,7 @@ const Banner = () => {
                                 name="search"
                                 type="text" />
                             <p
-                                className="font-black bg-yellow-400 text-white py-2 rounded-md px-8 ms-2 w-fit text-lg">
+                                className="font-black bg-yellow-400 text-white py-2 rounded-md px-8 ms-2 w-fit lg:text-lg">
                                 Search
                             </p>
                         </div>
@@ -62,7 +62,7 @@ const Banner = () => {
 
 
                 {/* banner swiper section start */}
-                <div className='col-span-12 lg:col-span-7 lg:mt-10 lg:mr-2'>
+                <div className='col-span-7 lg:mt-10 lg:mr-2 hidden lg:block'>
                     <Swiper
                         spaceBetween={30}
                         centeredSlides={true}

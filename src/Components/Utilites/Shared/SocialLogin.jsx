@@ -46,7 +46,7 @@ const SocialLogin = () => {
 
     return (
         <>
-            <h2 className="text-center text-2xl font-black text-yellow-400">
+            <h2 className="text-center text-xl lg:text-2xl font-black text-yellow-400">
                 Sign In With
             </h2>
 
