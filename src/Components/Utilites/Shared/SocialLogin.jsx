@@ -11,24 +11,27 @@ const SocialLogin = () => {
             <div className="grid grid-cols-12 mt-2">
 
                 {/* google login start */}
-                <div className="col-span-6 flex items-center justify-end pr-5">
+                <div
+                    // onClick={handleGoogleSignIn}
+                    className="col-span-6 flex items-center justify-end pr-5">
                     <FcGoogle
-                        // onClick={handleGoogleSignIn}
-                        className='text-5xl' />
+                        className='text-4xl' />
                     <p
-                        className='font-black text-gray-500 text-xl ms-3'>
+                        className='font-black text-gray-500 text-lg ms-2'>
                         Google
                     </p>
                 </div>
                 {/* google login end */}
 
                 {/* github login start */}
-                <div className="col-span-6 flex items-center ps-5">
+                <div
+                    // onClick={gitHubLogin}
+                    className="col-span-6 flex items-center ps-5">
                     <FaGithub
-                        // onClick={gitHubLogin}
-                        className='text-4xl' />
+
+                        className='text-3xl' />
                     <p
-                        className='font-black text-gray-500 text-xl ms-3'>
+                        className='font-black text-gray-500 text-lg ms-2'>
                         Git Hub
                     </p>
                 </div>

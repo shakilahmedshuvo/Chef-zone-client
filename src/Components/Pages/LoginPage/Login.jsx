@@ -1,5 +1,4 @@
-import { FcGoogle } from "react-icons/fc";
-import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import useAuth from "../../Utilites/Hooks/useAuth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -133,15 +132,18 @@ const Login = () => {
                         </div>
                         {/* or div end */}
 
-
                         {/* social login start */}
                         <SocialLogin />
                         {/* social login end */}
 
-
-                        <div>
-
+                        {/* register section start */}
+                        <div
+                            className="text-sm text-center mt-4 font-black text-gray-500">
+                            Don't Have an Account? New to CHEF ZONE?
+                            <br />
+                            Please <Link className="text-yellow-400 underline hover:text-yellow-500 duration-300" to={"/register"}>Register</Link>
                         </div>
+                        {/* register section end */}
 
                     </div>
                     {/* social login end*/}
