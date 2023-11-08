@@ -40,7 +40,7 @@ const Login = () => {
                     {/* input field section start */}
                     <div className="font-black ms-44">
 
-                        {/* <div className="flex items-center justify-center"> */}
+                        {/* email start */}
                         <div className="form-control text-gray-600 mt-6">
                             <label
                                 className="label">
@@ -57,9 +57,9 @@ const Login = () => {
                                 className="input input-bordered h-fit w-80 ps-5 pr-2 py-1 rounded-md"
                                 required />
                         </div>
-                        {/* </div> */}
+                        {/* email end */}
 
-                        {/* <div className="flex items-center justify-center"> */}
+                        {/* password start */}
                         <div className="form-control text-gray-600 mt-3">
                             <label
                                 className="label">
@@ -99,18 +99,19 @@ const Login = () => {
                                 </small>
                             </p>
                         </div>
-                        {/* </div> */}
+                        {/* password end */}
+
 
                         {/* submit btn start */}
-
-                        {/* submit btn end */}
                         <div
                             type="submit"
                             className="w-80 bg-yellow-400 text-white hover:bg-yellow-500 text-lg text-center py-1 rounded-md duration-300 cursor-pointer">
                             Login
                         </div>
+                        {/* submit btn end */}
 
                     </div>
+
                     {/* input field section end */}
 
                     {/* social login start*/}
