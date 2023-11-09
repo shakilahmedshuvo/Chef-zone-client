@@ -1,17 +1,16 @@
 import { useQuery } from "@tanstack/react-query";
 import SectionTitle from "../../Shared/SectionTitle";
 import ChefSingleCard from "./ChefSingleCard";
-// import ChefSingleCard from "./ChefSingleCard";
 // import { useEffect, useState } from "react";
 
 const Chef = () => {
     // const [data, setData] = useState([]);
 
     // useEffect(() => {
-    //     fetch("http://localhost:5000/chefCollection")
+    //     fetch("https://chef-zone-server-fqefzcdbi-shakilahmedshuvo.vercel.app/chefCollection")
     //         .then(res => res.json())
     //         .then(data => setData(data))
-    //     // .then(data => console.log(data))
+    //         .then(data => console.log(data))
     // }, []);
 
 
@@ -19,7 +18,7 @@ const Chef = () => {
     const { data, isLoading, isError } = useQuery({
         queryKey: ["chefCollection"],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/chefCollection');
+            const res = await fetch("https://chef-zone-server-dvi1v6tnx-shakilahmedshuvo.vercel.app/chefCollection")
             return res.json();
         }
     })

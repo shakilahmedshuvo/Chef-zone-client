@@ -5,7 +5,7 @@ const Recommended = () => {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/chefCollection')
+        fetch('https://chef-zone-server-dvi1v6tnx-shakilahmedshuvo.vercel.app/chefCollection')
             .then(res => res.json())
             .then(data => setData(data))
         // console.log(data);
