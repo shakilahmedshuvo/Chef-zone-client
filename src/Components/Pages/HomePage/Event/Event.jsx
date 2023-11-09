@@ -28,14 +28,14 @@ const Event = () => {
 
             <div className="grid lg:grid-cols-12 mt-10">
 
-                <div className='col-span-8 mt-5'>
+                <div className='col-span-12 lg:col-span-8 mt-5'>
                     <h3 className='text-yellow-400 font-black text-2xl'>
                         06/08/2024 — 12/08/2024
                     </h3>
-                    <h2 className='text-4xl font-bold mt-4'>
+                    <h2 className='text-3xl lg:text-4xl font-bold mt-4'>
                         Taste the Old and Chicken Biryani
                     </h2>
-                    <p className='mt-6 font-bold text-gray-500 my-4'>
+                    <p className='lg:mt-6 font-bold text-gray-500 my-4'>
                         If the chicken in a pan, adding chopped shallot, a little soda to sweeten it the carrots, and then chopping
                         <br />
                         fine, and the size of recipes for at my best; and well cooked, taking on the sauce and let it thickens;
@@ -43,7 +43,7 @@ const Event = () => {
                         add…
                     </p>
                     <button
-                        className="bg-gray-800 text-white font-black py-3 px-6 rounded-xl text-center mt-1 border-2 border-gray-600 hover:bg-white hover:text-black duration-300">
+                        className="bg-gray-800 text-white font-black py-3 px-6 rounded-xl text-center mt-1 border-2 border-gray-600 hover:bg-white hover:text-black duration-300 w-full lg:w-fit">
                         View More
                     </button>
                 </div>
@@ -71,10 +71,10 @@ const Event = () => {
                     <h3 className='text-yellow-400 font-black text-2xl'>
                         06/08/2024 — 12/08/2024
                     </h3>
-                    <h2 className='text-4xl font-bold mt-4'>
+                    <h2 className='text-3xl lg:text-4xl font-bold mt-4'>
                         Taste the Old and Chicken Biryani
                     </h2>
-                    <p className='mt-6 font-bold text-gray-500 my-4'>
+                    <p className='lg:mt-6 font-bold text-gray-500 my-4'>
                         If the chicken in a pan, adding chopped shallot, a little soda to sweeten it the carrots, and then chopping
                         <br />
                         fine, and the size of recipes for at my best; and well cooked, taking on the sauce and let it thickens;
@@ -82,7 +82,7 @@ const Event = () => {
                         add…
                     </p>
                     <button
-                        className="bg-gray-800 text-white font-black py-3 px-6 rounded-xl text-center mt-2 border-2 border-gray-600 hover:bg-white hover:text-black duration-300">
+                        className="bg-gray-800 text-white font-black py-3 px-6 rounded-xl text-center mt-2 border-2 border-gray-600 hover:bg-white hover:text-black duration-300 w-full lg:w-fit">
                         View More
                     </button>
                 </div>

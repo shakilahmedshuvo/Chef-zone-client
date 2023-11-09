@@ -4,7 +4,7 @@ const SectionTitle = ({ heading, subHeading }) => {
             <hr />
             {/* Upcoming Events section*/}
             <h2
-                className='text-center text-4xl font-black text-gray-600 pt-14'>
+                className='text-center text-3xl lg:text-4xl font-black text-gray-600 pt-14'>
                 {heading}
             </h2>
             <p

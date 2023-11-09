@@ -1,11 +1,55 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import SocialLogin from "../../Utilites/Shared/SocialLogin";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
+// import toast from "react-hot-toast";
+import useAuth from "../../Utilites/Hooks/useAuth";
 
 const Register = () => {
     // show pass and hide pass
     const [show, setShow] = useState();
+    // const [error, setError] = useState('');
+
+    const { createUser } = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+
+    // handleRegister function
+    const handleUserLogin = (event) => {
+        // stop reloading
+        event.preventDefault();
+        // get the info
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const photo = form.photo.value;
+        const password = form.name.value;
+        console.log(email, password, name, photo);
+
+        // password validation
+        // if (password.length < 6) {
+        //     setError('Enter a Strong Password or Enter more than 8 character password')
+        //     toast.error('The password is less than 6 characters')
+        // }
+        // else {
+        //     toast.success('Successfully Register')
+        //     setError('')
+        // }
+
+        createUser(email, password)
+            .then(result => {
+                const loggedUser = result.user;
+                navigate(from, { replace: true })
+                console.log(loggedUser);
+            })
+            .catch(error => {
+                console.log(error);
+            })
+        // reset the form 
+        form.reset();
+    }
+
 
     return (
         <div className="max-w-7xl mx-auto pt-14 lg:pt-0">
@@ -24,7 +68,7 @@ const Register = () => {
 
                 {/* login text section start */}
                 <form
-                    // onSubmit={handleUserLogin}
+                    onSubmit={handleUserLogin}
                     className="col-span-12 lg:col-span-6 lg:mt-24">
                     <h2 className="text-yellow-400 text-2xl lg:text-4xl font-black text-center">
                         Please Register
@@ -45,7 +89,6 @@ const Register = () => {
                             <input
                                 name="name"
                                 type="text"
-                                // ref={emailRef}
                                 placeholder="Enter Name"
                                 className="input input-bordered h-fit w-80 ps-5 pr-2 py-1 rounded-md mx-auto lg:mx-0"
                                 required />
@@ -63,8 +106,7 @@ const Register = () => {
                             </label>
                             <input
                                 name="email"
-                                type="text"
-                                // ref={emailRef}
+                                type="email"
                                 placeholder="Enter Email"
                                 className="input input-bordered h-fit w-80 ps-5 pr-2 py-1 rounded-md mx-auto lg:mx-0"
                                 required />
@@ -101,7 +143,7 @@ const Register = () => {
                                 </span>
                             </label>
                             <input
-                                name="email"
+                                name="password"
                                 type={show ?
                                     'text'
                                     :
@@ -113,7 +155,7 @@ const Register = () => {
                                 required />
                         </div>
                         <div
-                            className="relative bottom-14 right-28 flex items-center justify-end">
+                            className="relative bottom-14 lg:right-28 flex items-center justify-end">
                             <p
                                 onClick={() => setShow(!show)}
                                 className="relative top-7 right-9 text-2xl px-6 py-1 flex items-center h-6 cursor-pointer">
@@ -146,8 +188,8 @@ const Register = () => {
                         {/* submit btn start */}
                         <div
                             type="submit"
-                            className="w-80 bg-yellow-400 text-white hover:bg-yellow-500 text-lg text-center py-1 rounded-md duration-300 cursor-pointer mx-auto lg:mx-0">
-                            Login
+                            className="w-80 bg-yellow-400 text-white hover:bg-yellow-500 text-lg text-center py-1 rounded-md duration-300 cursor-pointer mx-auto lg:mx-0 form-control">
+                            <button>Register</button>
                         </div>
                         {/* submit btn end */}
 

@@ -3,16 +3,41 @@ import useAuth from "../../Utilites/Hooks/useAuth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import SocialLogin from "../../Utilites/Shared/SocialLogin";
+import toast from "react-hot-toast";
 
 const Login = () => {
     // show pass and hide pass
     const [show, setShow] = useState();
 
-    const { userLogIn, auth } = useAuth();
+    const { userLogIn } = useAuth();
 
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
+
+    // handleLogin
+    const handleUserLogin = (event) => {
+        // stop reloading
+        event.preventDefault();
+        // get the info
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+
+        userLogIn(email, password)
+            .then(result => {
+                const login = result.user;
+                console.log(login);
+                navigate(from, { replace: true })
+                toast.success('Your Login Successful')
+            })
+            .catch(error => {
+                console.log(error);
+            })
+        // reset the form 
+        form.reset();
+    };
 
     return (
         <div className="max-w-7xl mx-auto pt-12 lg:pt-0">
@@ -31,7 +56,7 @@ const Login = () => {
 
                 {/* login text section start */}
                 <form
-                    // onSubmit={handleUserLogin}
+                    onSubmit={handleUserLogin}
                     className="col-span-12 lg:col-span-6 mt-6 lg:mt-36">
                     <h2 className="text-yellow-400 text-2xl lg:text-4xl font-black text-center">
                         Please Login
@@ -52,8 +77,7 @@ const Login = () => {
                             </label>
                             <input
                                 name="email"
-                                type="text"
-                                // ref={emailRef}
+                                type="email"
                                 placeholder="Enter Email"
                                 className="input input-bordered h-fit w-80 ps-5 pr-2 py-1 rounded-md mx-auto lg:mx-0"
                                 required />
@@ -71,7 +95,7 @@ const Login = () => {
                                 </span>
                             </label>
                             <input
-                                name="email"
+                                name="password"
                                 type={show ?
                                     'text'
                                     :
@@ -107,8 +131,8 @@ const Login = () => {
                         {/* submit btn start */}
                         <div
                             type="submit"
-                            className="w-80 bg-yellow-400 text-white hover:bg-yellow-500 text-lg text-center py-1 rounded-md duration-300 cursor-pointer mx-auto lg:mx-0">
-                            Login
+                            className="w-80 bg-yellow-400 text-white hover:bg-yellow-500 text-lg text-center py-1 rounded-md duration-300 cursor-pointer mx-auto lg:mx-0 form-control">
+                            <button>Login</button>
                         </div>
                         {/* submit btn end */}
 
@@ -142,7 +166,7 @@ const Login = () => {
                         {/* register section start */}
                         <div
                             className="text-sm text-center mt-4 font-black text-gray-500">
-                            Don't Have an Account? New to CHEF ZONE?
+                            Dont Have an Account? New to CHEF ZONE?
                             <br />
                             Please <Link className="text-yellow-400 underline hover:text-yellow-500 duration-300" to={"/register"}>Register</Link>
                         </div>

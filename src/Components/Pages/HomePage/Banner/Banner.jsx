@@ -23,7 +23,7 @@ const Banner = () => {
                 {/* banner text section start */}
                 <div className='lg:col-span-5 col-span-12'>
 
-                    <h2 className='text-4xl lg:text-7xl font-black lg:mt-16 lg:ms-10 mx-5'>
+                    <h2 className='text-4xl lg:text-7xl font-black lg:mt-16 lg:ms-10 lg:mx-5 mx-2'>
                         Fun and Easy
                         <br />
                         To become
