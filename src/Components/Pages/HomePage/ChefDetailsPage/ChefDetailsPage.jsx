@@ -1,12 +1,27 @@
-import { useLoaderData } from "react-router-dom";
+// import { useLoaderData } from "react-router-dom";
 import ChefRightSection from "./ChefRightSection";
 import ChefLeftSection from "./ChefLeftSection";
 import Recommended from "../Recommended/Recommended";
+import { useLoaderData, useParams } from "react-router-dom";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const ChefDetailsPage = () => {
-    const data = useLoaderData();
-    const { name } = data;
+    // const data = useLoaderData();
+    // const { name } = data;
     // const { chefImg, name, experience, recipe, likes, bio, img } = data;
+
+    // json file fetch
+    const param = useParams()
+    const loader = useLoaderData()
+    const [data, setData] = useState({})
+    // get the data
+    useEffect(() => {
+        const singleData = loader.find(d => d.id == param.id)
+        if (singleData) {
+            setData(singleData)
+        }
+    }, [loader, param.id]);
 
     return (
         <div className="max-w-7xl mx-auto lg:pt-12">

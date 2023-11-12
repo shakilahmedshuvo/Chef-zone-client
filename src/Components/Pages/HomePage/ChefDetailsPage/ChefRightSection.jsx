@@ -59,7 +59,7 @@ const ChefRightSection = ({ data }) => {
             </div>
             <div className="lg:px-0 px-4">
                 <div
-                    className='bg-gray-900 hover:bg-gray-800 text-white font-black w-full text-center py-4 rounded-lg lg:mt-5 mb-10'>
+                    className='border-2 hover:bg-black duration-500 hover:text-white font-black w-full text-center py-4 rounded-lg lg:mt-5 mb-10'>
                     View Recipes
                 </div>
             </div>
