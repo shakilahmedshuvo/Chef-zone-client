@@ -3,15 +3,17 @@ import Chef from "../Chef/Chef";
 import Event from "../Event/Event";
 import Facilities from "../Facilities/Facilities";
 import OurNews from "../OurNews/OurNews";
+import Testimonials from "../Testimonial/Testimonials";
 
 const Home = () => {
     return (
         <>
             <Banner />
-            <Event />
             <Facilities />
-            < Chef />
+            <Chef />
             <OurNews />
+            <Event />
+            <Testimonials />
         </>
     );
 };

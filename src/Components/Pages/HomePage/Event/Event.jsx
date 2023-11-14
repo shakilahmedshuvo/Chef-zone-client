@@ -4,7 +4,7 @@ import SectionTitle from "../../Shared/SectionTitle";
 
 const Event = () => {
     return (
-        <div className="max-w-7xl mx-auto mt-5 p-3">
+        <div className="max-w-7xl mx-auto mt-24 p-3">
             <SectionTitle
                 heading={"Upcoming Events"}
             ></SectionTitle>
