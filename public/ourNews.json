@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "img": "https://img.freepik.com/free-photo/top-view-different-delicious-salads-with-cream-soups-french-fries-table_181624-38118.jpg?w=1380&t=st=1699959058~exp=1699959658~hmac=9ef9a2d0c0a4a9a6a68e88c7d294f852cceb2f1ddbfbbd366faedcc90794e598",
+        "userImg": "https://img.freepik.com/premium-vector/man-blue-hoodie-blue-circle-with-brown-hair_630301-46.jpg?w=740",
+        "date": "July 06, 2020",
+        "title": "HERE WILL BE THE TITLE",
+        "shortDes": "Lorem ipsum is simply dummy text of the printing and typesetting industry..."
+    },
+    {
+        "id": 2,
+        "img": "https://img.freepik.com/free-photo/assortment-korean-traditional-dishes-ai-generated-image_511042-1653.jpg?t=st=1699959001~exp=1699962601~hmac=287cc977f7a44ef51b18b80c44eede0a042f5f06683d7b1095a40fed42ee194b&w=1380",
+        "userImg": "https://img.freepik.com/premium-vector/man-blue-hoodie-blue-circle-with-brown-hair_630301-46.jpg?w=740",
+        "date": "July 04, 2020",
+        "title": "HERE WILL BE THE TITLE",
+        "shortDes": "Lorem ipsum is simply dummy text of the printing and typesetting industry..."
+    },
+    {
+        "id": 3,
+        "img": "https://img.freepik.com/free-photo/view-3d-burger-meal-with-french-fries_23-2150914759.jpg?t=st=1699959089~exp=1699962689~hmac=5808a2d098afe89688b089c5f5e33fd1ed09ee822728e35c4c5a79e751135bf7&w=1380",
+        "userImg": "https://img.freepik.com/premium-vector/man-blue-hoodie-blue-circle-with-brown-hair_630301-46.jpg?w=740",
+        "date": "July 05, 2020",
+        "title": "HERE WILL BE THE TITLE",
+        "shortDes": "Lorem ipsum is simply dummy text of the printing and typesetting industry..."
+    }
+]
