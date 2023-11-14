@@ -47,7 +47,7 @@ const Login = () => {
                 {/* login img section start */}
                 <div className="col-span-6 lg:block hidden">
                     <img
-                        className="w-full mt-14"
+                        className="w-full pt-14"
                         src="https://img.freepik.com/premium-vector/flat-illustration-design-cybersecurity_9206-2585.jpg?w=740"
                         alt="" />
                 </div>
@@ -69,7 +69,7 @@ const Login = () => {
                         <div
                             className="form-control text-gray-600 mt-6">
                             <label
-                                className="label ps-7 lg:ps-0">
+                                className="label ps-10 w-80">
                                 <span
                                     className="text-gray-500 font-black text-sm">
                                     Enter Your Email Address
@@ -87,8 +87,8 @@ const Login = () => {
                         {/* password start */}
                         <div
                             className="form-control text-gray-600 lg:mt-3">
-                            <label
-                                className="label ps-7 lg:ps-0">
+                           <label
+                                className="label ps-10 w-80">
                                 <span
                                     className="text-gray-500 font-black text-sm">
                                     Enter Your Password

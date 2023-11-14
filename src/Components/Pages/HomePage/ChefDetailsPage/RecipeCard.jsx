@@ -92,7 +92,7 @@ const RecipeCard = ({ data }) => {
                             src={recipe?.first?.img}
                             alt="" />
                         <p
-                            className='mt-5 border-2 py-3 text-gray-900 text-center rounded-xl font-black group-hover:bg-gray-700 group-hover:text-white duration-500'>
+                            className='mt-2 text-sm border-2 py-2 text-gray-900 text-center rounded-xl font-black group-hover:bg-black group-hover:text-white duration-500'>
                             Add To Favorite
                         </p>
                     </div>
@@ -189,7 +189,7 @@ const RecipeCard = ({ data }) => {
                             src={recipe?.second?.img}
                             alt="" />
                         <p
-                            className='mt-5 border-2 py-3 text-gray-900 text-center rounded-xl font-black group-hover:bg-gray-700 group-hover:text-white duration-500'>
+                            className='mt-2 text-sm border-2 py-2 text-gray-900 text-center rounded-xl font-black group-hover:bg-black group-hover:text-white duration-500'>
                             Add To Favorite
                         </p>
                     </div>
@@ -282,7 +282,7 @@ const RecipeCard = ({ data }) => {
                             src={recipe?.third?.img}
                             alt="" />
                         <p
-                            className='mt-5 border-2 py-3 text-gray-900 text-center rounded-xl font-black group-hover:bg-gray-700 group-hover:text-white duration-500'>
+                            className='mt-2 text-sm border-2 py-2 text-gray-900 text-center rounded-xl font-black group-hover:bg-black group-hover:text-white duration-500'>
                             Add To Favorite
                         </p>
                     </div>

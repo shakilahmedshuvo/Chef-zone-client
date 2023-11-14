@@ -21,7 +21,7 @@ const Banner = () => {
             <div className='grid grid-cols-12'>
 
                 {/* banner text section start */}
-                <div className='lg:col-span-5 col-span-12'>
+                <div className='lg:col-span-6 col-span-12'>
 
                     <h2 className='text-4xl lg:text-7xl font-black lg:mt-16 lg:ms-10 lg:mx-5 mx-2'>
                         Fun and Easy
@@ -30,7 +30,53 @@ const Banner = () => {
                         <br />
                         <span className='text-yellow-400'>Master Cook</span>
                     </h2>
-                    <p className='lg:ms-10 mt-4 lg:mt-8 font-semibold text-gray-500 mx-2 lg:mx-0'>
+
+                    {/* sm device slider start */}
+                    <div className='block lg:hidden mt-3 mx-1'>
+                        <Swiper
+                            spaceBetween={30}
+                            centeredSlides={true}
+                            autoplay={{
+                                delay: 2500,
+                                disableOnInteraction: false,
+                            }}
+                            modules={[Autoplay, Pagination, Navigation]}
+                            className="mySwiper">
+
+                            {/* first banner start */}
+                            <SwiperSlide>
+                                <img
+                                    className='w-full rounded-lg'
+                                    src="https://img.freepik.com/free-photo/fresh-tomato-vegetable-salad-with-grilled-meat-generative-ai_188544-8308.jpg?w=1380&t=st=1699161416~exp=1699162016~hmac=3ccb0c64441c663908cee574c07c13122eb6b6e70c9020a079647d17bcb54150"
+                                    alt="" />
+                            </SwiperSlide>
+                            {/* first banner end */}
+
+                            {/* second banner start */}
+                            <SwiperSlide>
+                                <img
+                                    className='w-full rounded-lg'
+                                    src="https://img.freepik.com/free-photo/fresh-seafood-rustic-wooden-plate-generative-ai_188544-8434.jpg?w=1380&t=st=1699161422~exp=1699162022~hmac=db6476bb04d4131288ab620dc3eadb7ddbe0ca4df46d82b347004a050c7bb151"
+                                    alt="" />
+                            </SwiperSlide>
+                            {/* second banner end */}
+
+
+                            {/* third banner start */}
+                            <SwiperSlide>
+                                <img
+                                    className='w-full rounded-lg'
+                                    src="https://img.freepik.com/free-photo/close-up-gourmet-meal-with-fresh-organic-vegetables-generative-ai_188544-8300.jpg?w=1380&t=st=1699161415~exp=1699162015~hmac=f522b650a2bcedd64c43168d0454e487754687795b565ef3de4effbf43045ad2"
+                                    alt="" />
+                            </SwiperSlide>
+                            {/* first banner end */}
+
+                        </Swiper>
+                    </div>
+                    {/* sm device slider end */}
+
+                    <p
+                        className='lg:ms-10 mt-4 lg:mt-8 font-semibold text-gray-500 mx-2 lg:mx-0'>
                         lets's join us to become expert in every kind of cuisine with a fun way to learn...
                         <br />
                         Providing various easy-to-follow recipes from all over the world & five-star
@@ -62,7 +108,7 @@ const Banner = () => {
 
 
                 {/* banner swiper section start */}
-                <div className='col-span-7 lg:mt-10 lg:mr-2 hidden lg:block'>
+                <div className='col-span-6 lg:mt-20 lg:mr-2 hidden lg:block'>
                     <Swiper
                         spaceBetween={30}
                         centeredSlides={true}
@@ -118,7 +164,7 @@ const Banner = () => {
                                 </div>
                             </div>
 
-                            <div className='w-28 relative bottom-36 left-7'>
+                            <div className='w-28 relative bottom-36 left-7 animate-bounce duration-500'>
                                 <img
                                     src={BannerBgOne}
                                     alt="" />
@@ -172,7 +218,7 @@ const Banner = () => {
                                 </div>
                             </div>
 
-                            <div className='w-28 relative bottom-36 left-7'>
+                            <div className='w-28 relative bottom-36 left-7 animate-bounce duration-500'>
                                 <img
                                     src={BannerBgTwo}
                                     alt="" />
@@ -226,7 +272,7 @@ const Banner = () => {
                                 </div>
                             </div>
 
-                            <div className='w-28 relative bottom-36 left-7'>
+                            <div className='w-28 relative bottom-36 left-7 animate-bounce duration-500'>
                                 <img
                                     src={BannerBgThree}
                                     alt="" />

@@ -19,7 +19,7 @@ const ChefSingleCard = ({ data }) => {
             {/* img end */}
 
             {/* text div start */}
-            <div className="border-s-4 mt-5">
+            <div className="border-s-2 mt-5">
 
                 <div className="mx-3 mt-4">
                     <h2 className="text-3xl font-bold text-yellow-400">
@@ -55,22 +55,25 @@ const ChefSingleCard = ({ data }) => {
 
                     </>
 
-                    {/* recommended section start */}
-                    <div className="flex items-center justify-end">
-                        <p
-                            className='rounded-full px-5 py-2 text-white text-center bg-yellow-400 font-black w-fit text-sm'>
-                            Recommended
-                        </p>
-                    </div>
-                    {/* recommended section end */}
+                    <div className="flex justify-between mt-3">
 
-                    <Link
-                        to={`/chefCollection/${id}`}>
-                        <p
-                            className='border-2 font-black w-full text-center py-3 rounded-lg mt-5 group-hover:bg-black duration-500 group-hover:text-white'>
-                            View Recipes
-                        </p>
-                    </Link>
+                        {/* recommended section start */}
+                        <div className="flex items-center justify-end">
+                            <p
+                                className='rounded-full px-4 py-2 text-white text-center bg-yellow-400 font-black w-fit text-xs'>
+                                Recommended
+                            </p>
+                        </div>
+                        {/* recommended section end */}
+
+                        <Link
+                            to={`/chefCollection/${id}`}>
+                            <p
+                                className='border-2 font-black w-fit text-center py-2 px-3 rounded-lg group-hover:bg-black duration-500 group-hover:text-white text-sm'>
+                                View Recipes
+                            </p>
+                        </Link>
+                    </div>
 
                 </div>
 

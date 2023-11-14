@@ -79,8 +79,8 @@ const Register = () => {
 
                         {/* name start */}
                         <div className="form-control text-gray-600 mt-6">
-                            <label
-                                className="label ps-7 lg:ps-0">
+                           <label
+                                className="label ps-10 w-80">
                                 <span
                                     className="text-gray-500 font-black text-sm">
                                     Enter Your Name *
@@ -97,8 +97,8 @@ const Register = () => {
 
                         {/* email start */}
                         <div className="form-control text-gray-600 mt-2">
-                            <label
-                                className="label ps-7 lg:ps-0">
+                           <label
+                                className="label ps-10 w-80">
                                 <span
                                     className="text-gray-500 font-black text-sm">
                                     Enter Your Email Address *
@@ -115,8 +115,8 @@ const Register = () => {
 
                         {/* photoURL start */}
                         <div className="form-control text-gray-600 mt-2">
-                            <label
-                                className="label ps-7 lg:ps-0">
+                           <label
+                                className="label ps-10 w-80">
                                 <span
                                     className="text-gray-500 font-black text-sm">
                                     Enter Your Photo URL
@@ -135,8 +135,8 @@ const Register = () => {
 
                         {/* password start */}
                         <div className="form-control text-gray-600 mt-3">
-                            <label
-                                className="label ps-7 lg:ps-0">
+                           <label
+                                className="label ps-10 w-80">
                                 <span
                                     className="text-gray-500 font-black text-sm">
                                     Enter Your Password *

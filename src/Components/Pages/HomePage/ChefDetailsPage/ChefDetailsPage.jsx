@@ -28,7 +28,7 @@ const ChefDetailsPage = () => {
 
             {/* page header section start */}
             <>
-                <div className="flex justify-center lg:justify-end items-center lg:mt-10 mt-5">
+                <div className="flex justify-center lg:justify-end items-center lg:pt-10 pt-16">
                     <p className='text-white bg-yellow-400 w-fit font-black rounded-full px-6 py-2 text-xs'>
                         Recommended
                     </p>
