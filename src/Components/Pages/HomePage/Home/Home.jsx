@@ -4,7 +4,7 @@ import DishOfTheWeek from "../DishOfTheWeek/DishOfTheWeek";
 import Event from "../Event/Event";
 import Facilities from "../Facilities/Facilities";
 import OurNews from "../OurNews/OurNews";
-// import Testimonials from "../Testimonial/Testimonials";
+import Testimonials from "../Testimonial/Testimonials";
 
 const Home = () => {
     return (
@@ -14,8 +14,8 @@ const Home = () => {
             <Chef />
             <OurNews />
             <Event />
-            {/* <Testimonials /> */}
             <DishOfTheWeek />
+            <Testimonials />
         </>
     );
 };
