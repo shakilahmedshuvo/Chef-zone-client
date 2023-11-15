@@ -63,12 +63,13 @@ const DishOfTheWeek = () => {
 
                             {/* swiper section start */}
                             <div
-                                className="px-12 mt-5">
+                                className="px-12 mt-5 h-full">
                                 <Swiper
                                     spaceBetween={50}
                                     slidesPerView={3}
                                     autoplay={{
                                         delay: 700,
+                                        disableOnInteraction: true,
                                     }}
                                     modules={[Autoplay, Pagination, Navigation]}
                                     className="mySwiper"
@@ -90,36 +91,42 @@ const DishOfTheWeek = () => {
 
                                     <SwiperSlide>
                                         <img
+                                            className="hover:scale-110 duration-500 hover:-rotate-45 cursor-pointer"
                                             src={plateOne}
                                             alt="" />
                                     </SwiperSlide>
 
                                     <SwiperSlide>
                                         <img
+                                            className="hover:scale-110 duration-500 hover:-rotate-45 cursor-pointer"
                                             src={plateTwo}
                                             alt="" />
                                     </SwiperSlide>
 
                                     <SwiperSlide>
                                         <img
+                                            className="hover:scale-110 duration-500 hover:-rotate-45 cursor-pointer"
                                             src={plateThree}
                                             alt="" />
                                     </SwiperSlide>
 
                                     <SwiperSlide>
                                         <img
+                                            className="hover:scale-110 duration-500 hover:-rotate-45 cursor-pointer"
                                             src={plateFour}
                                             alt="" />
                                     </SwiperSlide>
 
                                     <SwiperSlide>
                                         <img
+                                            className="hover:scale-110 duration-500 hover:-rotate-45 cursor-pointer"
                                             src={plateFive}
                                             alt="" />
                                     </SwiperSlide>
 
                                     <SwiperSlide>
                                         <img
+                                            className="hover:scale-110 duration-500 hover:-rotate-45 cursor-pointer"
                                             src={plateSix}
                                             alt="" />
                                     </SwiperSlide>
@@ -131,8 +138,9 @@ const DishOfTheWeek = () => {
 
                         </div>
 
-                        <div className="lg:block hidden col-span-6">
+                        <div className="lg:block hidden col-span-6 overflow-hidden cursor-pointer">
                             <img
+                                className="hover:scale-110 duration-700  hover:-rotate-6"
                                 src={imageOFDishes}
                                 alt="" />
                         </div>
