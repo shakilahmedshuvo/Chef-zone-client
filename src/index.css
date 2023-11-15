@@ -6,3 +6,10 @@
 * {
   font-family: 'Lato', sans-serif;
 }
+
+.parallaxImg {
+  background-image: url('../src/assets/parallax.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+}
