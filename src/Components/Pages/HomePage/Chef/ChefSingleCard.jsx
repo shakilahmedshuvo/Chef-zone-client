@@ -12,7 +12,7 @@ const ChefSingleCard = ({ data }) => {
             {/* img start */}
             <div className="overflow-hidden rounded-lg">
                 <img
-                    className="w-full duration-500 cursor-pointer group-hover:scale-105 transition"
+                    className="w-[60%] mx-auto lg:w-full duration-500 cursor-pointer group-hover:scale-105 transition"
                     src={chefImg}
                     alt="" />
             </div>
