@@ -42,8 +42,8 @@ const router = createBrowserRouter([
       {
         path: '/chefCollection/:id',
         element: <ChefDetailsPage />,
-        loader: () => fetch('/chefCollection.json')
-        // loader: ({ params }) => fetch(`https://chef-zone-server-dvi1v6tnx-shakilahmedshuvo.vercel.app/chefCollection/${params.id}`)
+        // loader: () => fetch('/chefCollection.json')
+        loader: ({ params }) => fetch(`http://localhost:5000/chefCollection/${params.id}`)
       }
     ]
   },

@@ -3,7 +3,7 @@ import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 
 const ChefSingleCard = ({ data }) => {
-    const { chefImg, name, experience, likes, id } = data;
+    const { chefImg, name, experience, likes, _id } = data;
     // console.log(data);
 
     return (
@@ -67,7 +67,7 @@ const ChefSingleCard = ({ data }) => {
                         {/* recommended section end */}
 
                         <Link
-                            to={`/chefCollection/${id}`}>
+                            to={`/chefCollection/${_id}`}>
                             <p
                                 className='border-2 font-black w-fit text-center py-2 px-3 rounded-lg group-hover:bg-black duration-500 group-hover:text-white text-sm'>
                                 View Recipes

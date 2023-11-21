@@ -3,7 +3,7 @@ import { BiSolidRightArrow } from "react-icons/bi";
 
 const SingleNewsCard = ({ data }) => {
     const { img, userImg, date, title, shortDes } = data;
-    console.log(data);
+    // console.log(data);
 
     return (
         <div
