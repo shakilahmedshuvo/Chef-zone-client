@@ -42,8 +42,7 @@ const router = createBrowserRouter([
       {
         path: '/chefCollection/:id',
         element: <ChefDetailsPage />,
-        // loader: () => fetch('/chefCollection.json')
-        loader: ({ params }) => fetch(`http://localhost:5000/chefCollection/${params.id}`)
+        loader: ({ params }) => fetch(`https://chef-zone-server-production.up.railway.app/chefCollection/${params.id}`)
       }
     ]
   },

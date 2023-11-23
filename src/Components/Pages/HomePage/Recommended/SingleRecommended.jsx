@@ -22,11 +22,9 @@ const SingleRecommended = ({ data }) => {
                     <div className="text-gray-500 font-bold">
                         <p className="mt-1">Experience: {experience}</p>
                         <p>Numbers of recipes: 3+</p>
-                        {/* <p className="text-sm mt-1">
-                            Top Recipe's: {recipe?.first?.name}
-                        </p> */}
 
-                        <p className="border-2  font-black rounded-lg group-hover:bg-gray-900 group-hover:text-white duration-500 mt-2">
+                        <p
+                            className="border-2 font-black rounded-lg group-hover:bg-gray-900 group-hover:text-white duration-500 mt-2 text-xs">
                             <Link
                                 to={"/"}
                                 className="flex items-center justify-center py-1 w-full">
@@ -34,19 +32,8 @@ const SingleRecommended = ({ data }) => {
                             </Link>
                         </p>
                     </div>
-
                 </div>
-
             </div>
-
-
-            {/* <p className="border-2  font-black rounded-lg mx-4 group-hover:bg-gray-900 group-hover:text-white duration-500">
-                <Link
-                    to={"/"}
-                    className="flex items-center justify-center py-2 w-full">
-                    View Details
-                </Link>
-            </p> */}
         </div>
     );
 };

@@ -1,18 +1,16 @@
+import { useEffect, useState } from "react";
 import SingleRecommended from "./SingleRecommended";
-import { useLoaderData } from "react-router-dom";
 
 const Recommended = () => {
-    // const [data, setData] = useState([])
+    const [data, setData] = useState([])
 
-    // useEffect(() => {
-    //     fetch('https://chef-zone-server-dvi1v6tnx-shakilahmedshuvo.vercel.app/chefCollection')
-    //         .then(res => res.json())
-    //         .then(data => setData(data))
-    //     // console.log(data);
-    // }, [])
-
-    // json fetch
-    const loader = useLoaderData();
+    // useEffect data load
+    useEffect(() => {
+        fetch('https://chef-zone-server-production.up.railway.app/chefCollection')
+            .then(res => res.json())
+            .then(data => setData(data))
+        // console.log(data);
+    }, []);
 
     return (
         <>
@@ -27,7 +25,7 @@ const Recommended = () => {
             <div
                 className='grid lg:grid-cols-3 lg:mb-24 mb-6'>
                 {
-                    loader?.slice(0, 3).map(data => <SingleRecommended
+                    data?.slice(0, 3).map(data => <SingleRecommended
                         key={data.id}
                         data={data}
                     ></SingleRecommended>)

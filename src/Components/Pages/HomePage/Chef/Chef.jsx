@@ -1,19 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import SectionTitle from "../../Shared/SectionTitle";
 import ChefSingleCard from "./ChefSingleCard";
-// import { useEffect, useState } from "react";
 
 const Chef = () => {
-    // const [data, setData] = useState([]);
-
-    // useEffect(() => {
-    //     fetch("https://chef-zone-server-fqefzcdbi-shakilahmedshuvo.vercel.app/chefCollection")
-    //         .then(res => res.json())
-    //         .then(data => setData(data))
-    //         .then(data => console.log(data))
-    // }, []);
-
-
     // tan stack for data fetch
     const { data, isLoading, isError } = useQuery({
         queryKey: ["chefCollection"],
@@ -32,14 +21,6 @@ const Chef = () => {
             Something went wrong. . .
         </p>
     }
-
-    // json file fetch data
-    // const [data, setData] = useState([]);
-    // useEffect(() => {
-    //     fetch("chefCollection.json")
-    //         .then(res => res.json())
-    //         .then(data => setData(data))
-    // }, []);
 
     return (
         <div className="max-w-7xl mx-auto mb-16">
